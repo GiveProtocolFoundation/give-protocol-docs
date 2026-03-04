@@ -36,6 +36,9 @@ sections:
       - title: "Tracking Your Impact"
         url: "/docs/donors/tracking-impact/"
         icon: "fa-chart-line"
+      - title: "Impact Methodology"
+        url: "/docs/impact-methodology/"
+        icon: "fa-calculator"
 
   - title: "For Organizations"
     icon: "fa-building"
