@@ -93,20 +93,47 @@ Welcome to the comprehensive guide for donors on Give Protocol. Whether you're n
 
 ### Cryptocurrency Options
 
-#### Supported Currencies
+Give Protocol is multichain by design. You choose which network your donation travels on — every supported chain settles directly to the receiving organization's wallet.
 
-- **Ethereum (ETH)**: Primary network
-- **Bitcoin (BTC)**: Via wrapped tokens
-- **Stablecoins**: USDC, USDT, DAI
-- **Other Tokens**: LINK, UNI, AAVE
-- **Layer 2**: Polygon, Arbitrum support
+#### Supported Networks
 
-#### Choosing the Right Currency
+**EVM Networks (Ethereum-compatible)**
 
-- **For stability**: Use stablecoins (USDC, DAI)
-- **For lower fees**: Use Layer 2 networks
-- **For simplicity**: Use ETH on mainnet
-- **For privacy**: Consider privacy coins where supported
+| Network | Native Token | Notes |
+|---|---|---|
+| **Base** | ETH | Default network — low fees, powered by Coinbase |
+| **Optimism** | ETH | Ethereum L2 with strong DeFi ecosystem |
+| **Moonbeam** | GLMR | Polkadot parachain with cross-chain compatibility |
+| **Avalanche** | AVAX | High throughput, low fees |
+| **Ethereum** | ETH | Available for legacy compatibility |
+
+**Polkadot Ecosystem**
+
+| Network | Native Token | Notes |
+|---|---|---|
+| **Polkadot** | DOT | Relay chain |
+| **Kusama** | KSM | Canary network |
+| **Moonbeam (parachain)** | GLMR | EVM-compatible within Polkadot |
+| **Moonriver** | MOVR | EVM-compatible within Kusama |
+
+**Solana**
+
+| Network | Native Token | Notes |
+|---|---|---|
+| **Solana** | SOL | High-speed, low-cost transactions |
+
+#### Commonly Accepted Tokens
+
+Accepted tokens vary by organization and network. The most widely supported are **USDC** and **USDT** (available on multiple chains), plus each chain's native token (ETH, GLMR, DOT, AVAX, SOL). See the [Technical Reference: Supported Tokens]({{ '/docs/technical/supported-tokens/' | relative_url }}) for eligibility criteria.
+
+#### Choosing the Right Network
+
+- **For the lowest fees**: Base or Optimism (Ethereum L2s)
+- **For stablecoin giving**: USDC on Base or Optimism
+- **For Polkadot ecosystem**: Moonbeam (GLMR) or native DOT on Polkadot
+- **For Solana ecosystem**: SOL or USDC on Solana
+
+> **Compatible wallets**: Base and Optimism work with MetaMask and other EVM wallets. Polkadot requires a Polkadot-compatible wallet (e.g., Talisman). Solana requires a Solana wallet (e.g., Phantom). See [Wallet Connection]({{ '/docs/getting-started/wallet-connection/' | relative_url }}) for setup instructions.
 
 ## Donation Strategies
 

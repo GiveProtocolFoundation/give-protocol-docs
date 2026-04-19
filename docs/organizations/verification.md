@@ -111,6 +111,20 @@ flowchart TD
     J --> L[Annual Renewal]
 ```
 
+### Verification Status Reference
+
+Your organization's verification status is visible on your charity profile and in the admin dashboard. The full set of statuses is:
+
+| Status | Display | Meaning |
+|--------|---------|---------|
+| `pending` | ⏳ Pending Review | Application submitted; awaiting admin review. Donations can still be received but the Verified badge is not shown to donors. |
+| `verified` | ✅ Verified | Admin has approved the organization. The Verified badge is displayed publicly on your profile and in search results. |
+| `approved` | ✅ Approved | Legacy equivalent of `verified` — displayed the same way. New applications use `verified`. |
+| `rejected` | ❌ Not Verified | Application was reviewed and did not meet requirements. See the review notes in your portal for the reason. You may re-apply after addressing the stated issues. |
+| `suspended` | ⚠️ Suspended | A previously verified organization has been suspended by an admin. The Verified badge is hidden from donors. Contact support to understand the reason and next steps. |
+
+> **Donors see:** On public charity profiles, donors see either the green **Verified** badge (status `verified` or `approved`) or no badge at all. The specific status value (`pending`, `rejected`, `suspended`) is not shown to donors.
+
 ### Verification Timeline
 
 - **Initial Application**: 1-2 business days

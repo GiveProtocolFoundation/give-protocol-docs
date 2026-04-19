@@ -424,9 +424,22 @@ View all volunteer activities across organizations:
 
 ### Leaderboards
 
+#### Validation Requirement
+
+> **Important:** Only **validated** volunteer hours count toward public leaderboards, credential milestones, and on-chain records. Hours you have logged but that have not yet been approved by the host organization appear in your personal dashboard but are excluded from all public rankings and Soul-Bound Token (SBT) issuance until the organization approves them.
+>
+> This policy ensures every publicly visible contribution has been confirmed by the organization you served — keeping rankings trustworthy for donors, employers, and the wider community.
+
+#### How Validation Works
+
+1. Log your hours after completing a volunteer session.
+2. The host organization reviews and approves your submission.
+3. Once approved, hours are marked **validated** and counted publicly.
+4. Pending or rejected hours remain visible only to you in your personal dashboard.
+
 #### Friendly Competition
 
-- Organization rankings
+- Organization rankings (validated hours only)
 - Peer comparisons
 - Team challenges
 - Community goals
