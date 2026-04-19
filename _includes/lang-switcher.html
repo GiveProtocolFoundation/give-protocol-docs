@@ -1,0 +1,32 @@
+<!-- Tier 1: Full translations (EN, ES, ZH) -->
+<nav class="lang-switcher" role="navigation" aria-label="{% t lang_switcher.label %}">
+  <span class="lang-switcher-label" aria-hidden="true">
+    <i class="fa-solid fa-globe" aria-hidden="true"></i>
+  </span>
+  <ul class="lang-list">
+    {% for lang in site.languages %}
+    <li>
+      {% if lang == site.active_lang %}
+      <span class="lang-current" lang="{{ lang }}" aria-current="true">
+        {% if lang == 'en' %}{% t lang_switcher.en %}
+        {% elsif lang == 'es' %}{% t lang_switcher.es %}
+        {% elsif lang == 'zh' %}{% t lang_switcher.zh %}
+        {% else %}{{ lang }}{% endif %}
+      </span>
+      {% else %}
+      <a href="{{ site.baseurl }}/{% if lang != site.default_lang %}{{ lang }}/{% endif %}{{ page.url | remove_first: '/' }}"
+         lang="{{ lang }}"
+         hreflang="{{ lang }}">
+        {% if lang == 'en' %}{% t lang_switcher.en %}
+        {% elsif lang == 'es' %}{% t lang_switcher.es %}
+        {% elsif lang == 'zh' %}{% t lang_switcher.zh %}
+        {% else %}{{ lang }}{% endif %}
+      </a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  <!-- Tier 2 separator: Google Translate widget -->
+  <div class="lang-switcher-separator" aria-hidden="true">|</div>
+  <div id="google_translate_element" class="google-translate-widget"></div>
+</nav>

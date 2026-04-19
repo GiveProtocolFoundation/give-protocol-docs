@@ -1,0 +1,79 @@
+# Give Protocol Documentation Site Configuration
+
+# Site settings
+title: Give Protocol Documentation
+description: >-
+  Complete documentation for Give Protocol — the blockchain-based platform for
+  transparent charitable giving, donations, and volunteering.
+baseurl: ""
+url: "https://docs.giveprotocol.io"
+lang: en
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-multiple-languages-plugin
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# jekyll-multiple-languages-plugin settings
+languages: ["en", "es", "zh"]
+default_lang: "en"
+exclude_from_localizations:
+  - assets
+  - images
+  - scripts
+  - .github
+  - node_modules
+
+# SEO
+author: Give Protocol Foundation
+twitter:
+  username: giveprotocol
+social:
+  name: Give Protocol Foundation
+  links:
+    - https://github.com/GiveProtocol
+logo: /assets/images/logo.svg
+
+# Google Analytics
+google_analytics: G-CBQHKLHD8T
+
+# Navigation structure (also see _data/navigation.yml for sidebar)
+header_pages:
+  - getting-started/index.md
+  - user-guides/index.md
+  - platform-features/index.md
+  - resources/index.md
+  - help-center/faq/index.md
+
+# Collections
+collections:
+  getting_started:
+    output: true
+    permalink: /getting-started/:path/
+  user_guides:
+    output: true
+    permalink: /user-guides/:path/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+      lang: en
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - scripts/check-translations.sh
+  - .github
+  - README.md
+  - CLAUDE.md

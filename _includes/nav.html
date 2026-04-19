@@ -1,0 +1,21 @@
+<aside class="sidebar" role="complementary" aria-label="{% t global.sidebar_navigation %}">
+  <nav class="sidebar-nav">
+    {% assign nav_sections = site.data.navigation.sidebar %}
+    {% for section in nav_sections %}
+    <div class="nav-section">
+      <h3 class="nav-section-title">{% t section.title_key %}</h3>
+      <ul class="nav-items">
+        {% for item in section.items %}
+        <li>
+          <a href="{{ item.url | relative_url }}"
+            {% if page.url == item.url %}aria-current="page"{% endif %}>
+            {% if item.icon %}<i class="{{ item.icon }}" aria-hidden="true"></i>{% endif %}
+            {% t item.title_key %}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </nav>
+</aside>

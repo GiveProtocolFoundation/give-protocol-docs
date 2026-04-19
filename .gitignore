@@ -1,21 +1,23 @@
-node_modules
-.env
-coverage
-coverage.json
-typechain
-typechain-types
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+Gemfile.lock
 
-# Hardhat files
-cache
-artifacts
+# Node
+node_modules/
+.env
 
 # Build outputs
-dist
-build
+dist/
+build/
 
 # IDE
-.idea
-.vscode
+.idea/
+.vscode/
 *.swp
 *.swo
 *~
@@ -23,10 +25,3 @@ build
 # OS
 .DS_Store
 Thumbs.db
-
-# Python virtual environment
-.venv
-
-# Generated files
-gas-report.txt
-tsconfig.json

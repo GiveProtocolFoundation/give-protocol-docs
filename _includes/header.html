@@ -1,0 +1,21 @@
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a href="{{ '/' | relative_url }}" class="site-logo" aria-label="{{ site.title }}">
+      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="{{ site.title }} logo" width="32" height="32" />
+      <span class="site-title">{% t global.site_title %}</span>
+    </a>
+    <nav class="header-nav" aria-label="{% t global.main_navigation %}">
+      <a href="{{ '/getting-started/' | relative_url }}">{% t nav.getting_started %}</a>
+      <a href="{{ '/user-guides/' | relative_url }}">{% t nav.user_guide %}</a>
+      <a href="{{ '/platform-features/' | relative_url %}}" >{% t nav.platform_features %}</a>
+      <a href="{{ '/resources/' | relative_url %}">{% t nav.resources %}</a>
+      <a href="{{ '/help-center/faq/' | relative_url %}">{% t nav.faq %}</a>
+    </nav>
+    <div class="header-actions">
+      {% include lang-switcher.html %}
+      <button class="mobile-menu-toggle" aria-label="{% t global.toggle_menu %}" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,65 +1,59 @@
-# CLAUDE.md - Give Protocol Smart Contracts
+# CLAUDE.md - Give Protocol Documentation
 
-Give Protocol Smart Contracts - Solidity smart contracts for blockchain-based charitable giving on Moonbeam Network. Part of the Give Protocol distributed repository architecture.
+Give Protocol Documentation - Jekyll-based documentation site for the Give Protocol charitable giving platform. Part of the Give Protocol distributed repository architecture.
 
 ## Repository Structure
 
-This is the **contracts** repository, one of four Give Protocol repositories:
+This is the **docs** repository, one of four Give Protocol repositories:
+
 - **give-protocol-webapp**: React/Vite Progressive Web App
-- **give-protocol-contracts** (this repo): Solidity smart contracts and Hardhat infrastructure
-- **give-protocol-docs**: Jekyll documentation site
+- **give-protocol-contracts**: Solidity smart contracts and Hardhat infrastructure
+- **give-protocol-docs** (this repo): Jekyll documentation site
 - **give-protocol-backend**: Supabase backend and admin functions
 
 ## Essential Commands
 
 ```bash
-npm run compile              # Compile Solidity contracts
-npm run test                 # Run Hardhat tests
-npm run test:coverage        # Run test coverage report
-npm run lint:sol             # Run Solhint on contracts
-npm run deploy:moonbase      # Deploy to Moonbase Alpha testnet
-npm run fuzz:arm             # Arm fuzzing tests (Scribble)
-npm run fuzz:run             # Run fuzzing tests
-npm run fuzz:disarm          # Disarm fuzzing tests
+bundle install                     # Install Jekyll and translation dependencies
+bundle exec jekyll serve           # Start local server (port 4000)
+bundle exec jekyll build           # Build to _site/
+./scripts/check-translations.sh    # Validate i18n completeness
 ```
 
-## Smart Contracts
+## Architecture
 
-Core contracts in `/contracts/`:
-- **DurationDonation.sol**: Main donation contract
-- **CharityScheduledDistribution.sol**: Monthly donation scheduling
-- **VolunteerVerification.sol**: Volunteer verification system
-- **DistributionExecutor.sol**: Automated distribution execution
+- **Config**: `_config.yml` — site metadata, plugin declarations, language list
+- **Layouts**: `_layouts/` — `default.html`, `page.html`, `home.html`
+- **Includes**: `_includes/` — `header.html`, `footer.html`, `nav.html`, `lang-switcher.html`, `google-translate.html`
+- **Data**: `_data/navigation.yml` — sidebar/nav structure
+- **i18n**: `_i18n/` — translation YAMLs (`en.yml`, `es.yml`, `zh.yml`) + content dirs (`en/`, `es/`, `zh/`)
+- **Assets**: `assets/css/main.scss` — main stylesheet
 
-## Deployment Scripts
+## Translation Architecture
 
-Scripts in `/scripts/`:
-- **deploy-moonbase.cjs**: Main deployment script with contract verification
-- **deploy-portfolio-funds.cjs**: Deploy portfolio fund contracts
-- **create-test-schedules.cjs**: Create test donation schedules
+Two-tier i18n strategy:
 
-## Environment Setup
+| Tier | Languages | Method |
+|------|-----------|--------|
+| 1 — Full | English (default), Spanish (`/es/`), Chinese Simplified (`/zh/`) | `jekyll-multiple-languages-plugin`, human-translated |
+| 2 — Widget | DE, FR, JA, PT, KO, AR, HI, ZH-TW | Google Translate widget |
 
-`.env` file required:
-- `MOONBASE_RPC_URL`: Moonbase Alpha RPC endpoint
-- `PRIVATE_KEY`: Deployer wallet private key (never commit!)
-- `MOONSCAN_API_KEY`: For contract verification
+### Adding/Updating Translations
 
-## Testing
+1. Author content in English first (`_i18n/en/`)
+2. Mirror the file path in `_i18n/es/` and `_i18n/zh/`
+3. Update UI strings in `_i18n/es.yml` and `_i18n/zh.yml` as needed
+4. Run `./scripts/check-translations.sh` to find missing translations
+5. CI will warn on missing pages and fail on missing UI string keys
 
-- Unit tests in `/test/` using Hardhat and Chai
-- Coverage reports generated in `/coverage/`
-- Gas reporting enabled via hardhat-gas-reporter
+## Deployment
 
-## Security
+- Auto-deploys to GitHub Pages on push to `main` via `.github/workflows/deploy.yml`
+- Published at: https://docs.giveprotocol.io (CNAME)
+- The CI workflow runs `check-translations.sh` before deploying
 
-- Fuzzing via Scribble (`npm run fuzz:arm` → `npm run fuzz:run`)
-- Security scanning via GitHub Actions (Trivy)
-- Dependency auditing via npm audit
+## Code Quality Rules
 
-## Git Workflow
-
-1. Run `npm run compile` to verify contracts compile
-2. Run `npm test` before committing
-3. Run `npm run lint:sol` to check Solidity style
-4. Keep commits focused on single logical changes
+- Keep JSX nesting ≤ 4 levels in Liquid templates
+- Use `{% t key %}` (not hardcoded strings) for all UI text in layouts/includes
+- Every new English content page in `_i18n/en/` must have a corresponding placeholder in `_i18n/es/` and `_i18n/zh/`

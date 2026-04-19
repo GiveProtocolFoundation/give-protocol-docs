@@ -1,0 +1,20 @@
+<!-- Phase 5: Google Translate widget for Tier 2 languages -->
+<!-- Tier 2: DE, FR, JA, PT, KO, AR, HI, ZH-TW -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: "en",
+        includedLanguages: "de,fr,ja,pt,ko,ar,hi,zh-TW",
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+        autoDisplay: false,
+      },
+      "google_translate_element"
+    );
+  }
+</script>
+<script
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  async
+  defer
+></script>
