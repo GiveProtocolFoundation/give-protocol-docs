@@ -1,0 +1,1268 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Security Headers -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://translate.google.com https://translate.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: blob: https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://translate.googleapis.com; frame-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+
+    <title>
+      Wallet & Transactions - Give Protocol Documentation
+    </title>
+    <meta
+      name="description"
+      content="Troubleshoot wallet connection and transaction issues"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CBQHKLHD8T"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-CBQHKLHD8T");
+    </script>
+
+    <!-- Language detection -->
+     
+
+    <!-- Alternate language links for SEO -->
+     
+      
+     
+    <link
+      rel="alternate"
+      hreflang="es"
+      href="/docstroubleshootingwallet-transactionses/"
+    />
+     
+     
+    <link
+      rel="alternate"
+      hreflang="zh"
+      href="/docstroubleshootingwallet-transactionszh/"
+    />
+      
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/images/give_logo_gradient.svg"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=2026-03-19-v2" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Translate -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,es,de,fr,ja,zh-CN,zh-TW,th,vi,ko,ar,hi",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false,
+          },
+          "google_translate_element",
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </head>
+
+  <body class="modern-docs preload">
+    <script>
+      // Remove preload class after page loads to enable transitions
+      window.addEventListener("load", function () {
+        document.body.classList.remove("preload");
+      });
+    </script>
+    <!-- Hidden Google Translate Element -->
+    <div id="google_translate_element" style="display: none"></div>
+
+    <!-- Modern Header -->
+    <header class="modern-header">
+      <div class="header-container">
+        <a href="/" class="brand">
+          <img
+            src="/assets/images/give_logo_gradient.svg"
+            alt="Give Protocol"
+          />
+          <span>Give Protocol <em>Docs</em></span>
+        </a>
+
+        <div class="header-search">
+          <div class="search-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search documentation..."
+              data-translate="yes"
+              aria-label="Search documentation"
+            />
+            <kbd class="search-kbd">Ctrl K</kbd>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <a href="https://giveprotocol.io" class="btn-main-site" title="Go to main site">
+            <i class="fas fa-external-link-alt"></i>
+            <span>Main Site</span>
+          </a>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle light/dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+      <!-- Modern Sidebar -->
+      <aside class="modern-sidebar">
+        <button class="mobile-nav-toggle">
+          <span>Navigation</span>
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="sidebar-nav">
+          <!-- Dynamic navigation from data file -->
+          
+          <div class="nav-section">
+            <h3 class="section-title">
+              <i class="fas fa-rocket"></i>
+              Getting Started
+            </h3>
+            <ul class="nav-list">
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/getting-started/what-is-give-protocol/"
+                  class=""
+                >
+                  <i class="fas fa-info-circle"></i>
+                  What is Give Protocol?
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/getting-started/creating-account/"
+                  class=""
+                >
+                  <i class="fas fa-user-plus"></i>
+                  Creating Your Account
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/getting-started/setting-up-profile/"
+                  class=""
+                >
+                  <i class="fas fa-user-edit"></i>
+                  Setting Up Your Profile
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/getting-started/wallet-connection/"
+                  class=""
+                >
+                  <i class="fas fa-wallet"></i>
+                  Wallet Connection Guide
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/getting-started/first-steps/"
+                  class=""
+                >
+                  <i class="fas fa-play"></i>
+                  First Steps Walkthrough
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/getting-started/dashboard/"
+                  class=""
+                >
+                  <i class="fas fa-tachometer-alt"></i>
+                  Dashboard Overview
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          <div class="nav-section">
+            <h3 class="section-title">
+              <i class="fas fa-heart"></i>
+              For Donors
+            </h3>
+            <ul class="nav-list">
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/donors/making-donations/"
+                  class=""
+                >
+                  <i class="fas fa-hand-holding-heart"></i>
+                  Making Donations
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/donors/understanding-cefs/"
+                  class=""
+                >
+                  <i class="fas fa-university"></i>
+                  Understanding CEFs
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/donors/tracking-impact/"
+                  class=""
+                >
+                  <i class="fas fa-chart-line"></i>
+                  Tracking Your Impact
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/impact-methodology/"
+                  class=""
+                >
+                  <i class="fas fa-calculator"></i>
+                  Impact Methodology
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          <div class="nav-section">
+            <h3 class="section-title">
+              <i class="fas fa-building"></i>
+              For Organizations
+            </h3>
+            <ul class="nav-list">
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/organizations/verification/"
+                  class=""
+                >
+                  <i class="fas fa-shield-alt"></i>
+                  Verification Process
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/organizations/receiving-funds/"
+                  class=""
+                >
+                  <i class="fas fa-coins"></i>
+                  Receiving Funds
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/organizations/reporting-tools/"
+                  class=""
+                >
+                  <i class="fas fa-chart-bar"></i>
+                  Reporting Tools
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/organizations/withdrawal-guide/"
+                  class=""
+                >
+                  <i class="fas fa-money-bill-wave"></i>
+                  Withdrawal Guide
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          <div class="nav-section">
+            <h3 class="section-title">
+              <i class="fas fa-hands-helping"></i>
+              For Volunteers
+            </h3>
+            <ul class="nav-list">
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/volunteers/finding-opportunities/"
+                  class=""
+                >
+                  <i class="fas fa-search"></i>
+                  Finding Opportunities
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/volunteers/time-tracking/"
+                  class=""
+                >
+                  <i class="fas fa-clock"></i>
+                  Time Tracking
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/volunteers/earning-credentials/"
+                  class=""
+                >
+                  <i class="fas fa-award"></i>
+                  Earning Credentials
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/volunteers/safety-guidelines/"
+                  class=""
+                >
+                  <i class="fas fa-hard-hat"></i>
+                  Safety Guidelines
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          <div class="nav-section">
+            <h3 class="section-title">
+              <i class="fas fa-code"></i>
+              Technical Reference
+            </h3>
+            <ul class="nav-list">
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/technical/smart-contracts/"
+                  class=""
+                >
+                  <i class="fas fa-file-contract"></i>
+                  Smart Contracts
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/technical/api-docs/"
+                  class=""
+                >
+                  <i class="fas fa-plug"></i>
+                  API Documentation
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/technical/security-model/"
+                  class=""
+                >
+                  <i class="fas fa-lock"></i>
+                  Security Model
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/technical/supported-tokens/"
+                  class=""
+                >
+                  <i class="fas fa-coins"></i>
+                  Supported Tokens
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          <div class="nav-section">
+            <h3 class="section-title">
+              <i class="fas fa-wrench"></i>
+              Troubleshooting
+            </h3>
+            <ul class="nav-list">
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/troubleshooting/account-issues/"
+                  class=""
+                >
+                  <i class="fas fa-user-cog"></i>
+                  Account Issues
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/troubleshooting/wallet-transactions/"
+                  class="active"
+                >
+                  <i class="fas fa-wallet"></i>
+                  Wallet & Transactions
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/troubleshooting/donation-problems/"
+                  class=""
+                >
+                  <i class="fas fa-exclamation-circle"></i>
+                  Donation Problems
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/troubleshooting/platform-errors/"
+                  class=""
+                >
+                  <i class="fas fa-bug"></i>
+                  Platform Errors
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+
+          <!-- Support Section - Always at bottom -->
+          <div class="nav-section nav-section-support">
+            <h3 class="section-title">
+              <i class="fas fa-headset"></i>
+              Support
+            </h3>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a
+                  href="/docs/support/"
+                  class=""
+                >
+                  <i class="fas fa-life-ring"></i>
+                  Contact Support
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="modern-content">
+        <div class="content-card">
+          <!-- Breadcrumbs -->
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/" class="">Home</a>
+                
+            <span class="separator">/</span>
+            
+            <a
+              href="/docs/"
+            >
+              Docs
+            </a>
+               
+            <span class="separator">/</span>
+            
+            <a
+              href="/docs/troubleshooting/"
+            >
+              Troubleshooting
+            </a>
+               
+            <span class="separator">/</span>
+            
+            <span>Wallet transactions</span>
+              
+          </nav>
+
+          <article><h1 id="wallet--transaction-troubleshooting">Wallet &amp; Transaction Troubleshooting</h1>
+
+<p>This page is under construction. Content coming soon.</p>
+
+<h2 id="wallet-connection-issues">Wallet Connection Issues</h2>
+
+<h3 id="metamask-not-connecting">MetaMask Not Connecting</h3>
+
+<ul>
+  <li>Ensure MetaMask is unlocked</li>
+  <li>Check you’re on Moonbeam network</li>
+  <li>Try refreshing the page</li>
+</ul>
+
+<h3 id="transaction-pending">Transaction Pending</h3>
+
+<ul>
+  <li>Check network congestion</li>
+  <li>Verify gas settings</li>
+  <li>Wait for confirmation</li>
+</ul>
+
+<h2 id="failed-transactions">Failed Transactions</h2>
+
+<p>Common causes and solutions for failed donation transactions.</p>
+
+<h2 id="contact-support">Contact Support</h2>
+
+<p>If you continue to have issues, contact our support team with your transaction hash.</p>
+
+<hr />
+
+<p><em>This page is being developed. Check back soon for complete documentation.</em></p>
+</article>
+
+          <!-- Page Actions -->
+          <div class="page-actions">
+            
+
+            <div class="last-updated">
+              Last updated: April 19, 2026
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="modern-footer site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="/safety-security/cookie-policy/">Cookie Policy</a>
+          <a href="/safety-security/platform-security/">Privacy Policy</a>
+          <a href="/help-center/need-help/">Contact Us</a>
+          <a href="https://giveprotocol.io" target="_blank" rel="noopener">Main Website</a>
+        </div>
+        <div class="footer-text">
+          <p>Copyright &copy; <span id="footer-year"></span> Give Protocol. All rights reserved.</p>
+          <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Search Results Overlay -->
+    <div class="search-results-overlay" id="search-overlay">
+      <div class="search-results-container">
+        <div class="search-header">
+          <h3>Search Results</h3>
+          <button class="close-search" id="close-search" title="Close search results">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div id="search-results"></div>
+        <div class="search-shortcuts">
+          <div class="shortcut"><kbd>↑</kbd><kbd>↓</kbd> Navigate</div>
+          <div class="shortcut"><kbd>Enter</kbd> Select</div>
+          <div class="shortcut"><kbd>Esc</kbd> Close</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      /* global google */
+
+      // Mobile nav toggle
+      const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
+      const sidebarNav = document.querySelector(".sidebar-nav");
+
+      mobileNavToggle.addEventListener("click", () => {
+        sidebarNav.style.display =
+          sidebarNav.style.display === "none" ? "block" : "none";
+      });
+
+      // Header scroll effect
+      const header = document.querySelector(".modern-header");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 10) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+      // Dark mode toggle
+      const themeToggle = document.getElementById("theme-toggle");
+      const themeIcon = themeToggle.querySelector("i");
+
+      // Check for saved theme preference or default to light mode
+      const savedTheme = localStorage.getItem("theme") || "light";
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        themeIcon.classList.remove("fa-moon");
+        themeIcon.classList.add("fa-sun");
+      }
+
+      // Toggle theme on button click
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        const isDark = document.body.classList.contains("dark-mode");
+
+        // Update icon
+        if (isDark) {
+          themeIcon.classList.remove("fa-moon");
+          themeIcon.classList.add("fa-sun");
+          localStorage.setItem("theme", "dark");
+        } else {
+          themeIcon.classList.remove("fa-sun");
+          themeIcon.classList.add("fa-moon");
+          localStorage.setItem("theme", "light");
+        }
+      });
+    </script>
+
+    <!-- Inline critical styles -->
+    <style>
+      /* Navigation icon styles */
+      .nav-item a i {
+        margin-right: 0.5rem;
+        width: 1rem;
+        text-align: center;
+        color: var(--color-text-tertiary);
+        transition: color 0.2s ease;
+        font-size: 0.8125rem;
+      }
+
+      .nav-item a:hover i,
+      .nav-item a.active i {
+        color: var(--emerald-600);
+      }
+
+      /* Header search icon — hardcoded so dark mode doesn't affect it */
+      .search-icon {
+        position: absolute;
+        left: 0.875rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #94a3b8;
+        font-size: 0.8125rem;
+        pointer-events: none;
+      }
+
+      /* Ctrl+K kbd badge */
+      .search-kbd {
+        position: absolute;
+        right: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+        padding: 3px 6px;
+        background: #f1f5f9;
+        border: 1px solid #e2e8f0;
+        border-radius: 4px;
+        font-size: 0.75rem; /* min 12px for readability at 320px viewport */
+        font-family: inherit;
+        color: #94a3b8;
+        pointer-events: none;
+        line-height: 1.6;
+      }
+
+      /* Theme toggle — hardcoded colors for white header */
+      .theme-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        padding: 5px; /* WCAG 2.5.5: brings effective tap area to 44×44px */
+        cursor: pointer;
+        background: transparent !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+      }
+
+      .theme-toggle:hover {
+        background-color: #f8fafc !important;
+        border-color: #cbd5e1 !important;
+      }
+
+      .theme-toggle i,
+      .theme-toggle i.fas {
+        font-size: 0.9375rem !important;
+        transition: transform 0.3s ease, color 0.3s ease;
+        font-weight: 900 !important;
+      }
+
+      .theme-toggle i.fa-moon {
+        color: #64748b !important;
+      }
+
+      body.dark-mode .theme-toggle i.fa-sun {
+        color: #f59e0b !important;
+      }
+
+      .theme-toggle:hover i {
+        transform: scale(1.1);
+      }
+
+      .mobile-nav-toggle i {
+        color: var(--color-text-tertiary);
+        font-size: 1rem;
+      }
+
+      .edit-link i {
+        margin-right: 0.375rem;
+        font-size: 0.875rem;
+      }
+
+      .close-search i {
+        color: #6b7280;
+        font-size: 1rem;
+        transition: color 0.2s ease;
+      }
+
+      .close-search:hover i {
+        color: #dc2626;
+      }
+
+      /* Dark mode — sidebar icon colors */
+      body.dark-mode .nav-item a i {
+        color: #9ca3af;
+      }
+
+      body.dark-mode .nav-item a:hover i,
+      body.dark-mode .nav-item a.active i {
+        color: var(--emerald-400);
+      }
+
+      /* Header icons stay the same in dark mode (white header) */
+
+      body.dark-mode .close-search i {
+        color: #9ca3af;
+      }
+
+      body.dark-mode .close-search:hover i {
+        color: #f87171;
+      }
+
+      /* Search result items */
+      .search-item {
+        padding: 1rem;
+        border-bottom: 1px solid #e5e7eb;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      .search-item:hover {
+        background-color: #f9fafb;
+      }
+
+      .search-item:last-child {
+        border-bottom: none;
+      }
+
+      .result-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 0.375rem;
+        line-height: 1.4;
+      }
+
+      .result-excerpt {
+        color: #6b7280;
+        font-size: 0.8125rem;
+        line-height: 1.5;
+        margin-bottom: 0.25rem;
+      }
+
+      .result-category {
+        color: #059669;
+        font-size: 0.6875rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      mark {
+        background-color: #d1fae5;
+        color: #065f46;
+        padding: 0.125rem 0.25rem;
+        border-radius: 0.25rem;
+        font-weight: 600;
+      }
+
+      /* Dark mode search */
+      body.dark-mode .search-item {
+        border-bottom-color: #374151;
+      }
+
+      body.dark-mode .search-item:hover {
+        background-color: #374151;
+      }
+
+      body.dark-mode .result-title {
+        color: #f3f4f6;
+      }
+
+      body.dark-mode .result-excerpt {
+        color: #9ca3af;
+      }
+
+      body.dark-mode .result-category {
+        color: #34d399;
+      }
+
+      body.dark-mode mark {
+        background-color: rgba(16, 185, 129, 0.2);
+        color: #6ee7b7;
+      }
+
+      /* Footer */
+      .modern-footer {
+        margin-top: 4rem;
+        padding: 2.5rem 0;
+        border-top: 1px solid var(--color-border-primary);
+        background-color: transparent;
+        width: 100% !important;
+        position: relative;
+        left: 0;
+        right: 0;
+        clear: both;
+      }
+
+      .modern-footer .footer-content {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 1.5rem;
+        text-align: center !important;
+      }
+
+      .modern-footer .footer-links {
+        display: flex !important;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center !important;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      .modern-footer .footer-links a {
+        color: var(--color-text-tertiary);
+        text-decoration: none;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        transition: color 0.2s ease;
+      }
+
+      .modern-footer .footer-links a:hover {
+        color: var(--emerald-600);
+      }
+
+      .modern-footer .footer-text {
+        text-align: center !important;
+        color: var(--color-text-tertiary);
+        font-size: 0.8125rem;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .modern-footer .footer-text p {
+        margin: 0;
+        text-align: center !important;
+      }
+
+      /* Dark mode footer */
+      body.dark-mode .modern-footer {
+        border-top-color: #374151;
+      }
+
+      @media (max-width: 768px) {
+        .modern-footer .footer-links {
+          flex-direction: column !important;
+          align-items: center;
+          gap: 0.75rem;
+        }
+
+        .modern-footer .footer-content {
+          padding: 0 1.5rem;
+        }
+      }
+
+      /* Hide Google Translate elements */
+      .goog-te-banner-frame,
+      .goog-te-gadget,
+      .goog-te-ftab,
+      .goog-logo-link,
+      .goog-te-balloon-frame,
+      .goog-te-combo,
+      div:has(> [aria-label*="Google Translate"]),
+      [aria-label*="Google Translate"],
+      [aria-label*="Original text"],
+      [aria-label*="Rate this translation"],
+      div[style*="position: fixed"][style*="z-index"]:has(
+          [aria-label*="Google"]
+        ),
+      iframe[src*="translate.googleapis.com"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        position: absolute !important;
+        left: -9999px !important;
+      }
+
+      /* Override conflicting styles */
+      footer.modern-footer {
+        display: block !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: center !important;
+      }
+
+      footer.modern-footer .footer-content {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        max-width: 1280px !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+      }
+    </style>
+
+    <!-- Enhanced Search Scripts -->
+    <script>
+      // Enhanced search functionality
+      const searchInput = document.getElementById("search-input");
+      const searchOverlay = document.getElementById("search-overlay");
+      const searchResults = document.getElementById("search-results");
+      const searchClose = document.getElementById("close-search");
+
+      let searchData = [];
+
+      // Load search data with multiple fallback strategies
+      async function loadSearchData() {
+        const possibleUrls = [
+          '/search.json',
+          "/search.json",
+          "./search.json",
+          "../search.json",
+          "../../search.json",
+        ];
+
+        for (const url of possibleUrls) {
+          try {
+            console.log(`Trying to load search data from: ${url}`);
+            const response = await fetch(url);
+            if (response.ok) {
+              const data = await response.json();
+              searchData = data;
+              console.log(
+                `Search data loaded successfully from: ${url} (${data.length} items)`,
+              );
+              return;
+            }
+          } catch (error) {
+            console.log(`Failed to load from ${url}:`, error.message);
+          }
+        }
+
+        // Final fallback: Create basic search data from navigation
+        console.log("Using navigation fallback for search data");
+        const navLinks = document.querySelectorAll(".nav-item a");
+        searchData = Array.from(navLinks).map((link) => ({
+          title: link.textContent.trim(),
+          url: link.getAttribute("href"),
+          content: link.textContent.trim(),
+          category: "Navigation",
+        }));
+        console.log(
+          `Fallback search data created (${searchData.length} items)`,
+        );
+      }
+
+      // Initialize search data
+      loadSearchData();
+
+      function highlightText(text, query) {
+        if (!query) return text;
+        const regex = new RegExp(
+          `(${query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`,
+          "gi",
+        );
+        return text.replace(regex, "<mark>$1</mark>");
+      }
+
+      function calculateRelevance(item, query) {
+        const lowerQuery = query.toLowerCase();
+        const lowerTitle = item.title.toLowerCase();
+        const lowerContent = item.content.toLowerCase();
+
+        let score = 0;
+
+        // Title exact match gets highest score
+        if (lowerTitle === lowerQuery) score += 100;
+        // Title starts with query
+        else if (lowerTitle.startsWith(lowerQuery)) score += 50;
+        // Title contains query
+        else if (lowerTitle.includes(lowerQuery)) score += 25;
+
+        // Content matches
+        if (lowerContent.includes(lowerQuery)) score += 10;
+
+        // Multiple word matches
+        const queryWords = lowerQuery
+          .split(" ")
+          .filter((word) => word.length > 2);
+        queryWords.forEach((word) => {
+          if (lowerTitle.includes(word)) score += 5;
+          if (lowerContent.includes(word)) score += 2;
+        });
+
+        return score;
+      }
+
+      function performSearch(query) {
+        if (!query || query.length < 2) {
+          searchOverlay.classList.remove("active");
+          return;
+        }
+
+        if (searchData.length === 0) {
+          console.log("Search data not loaded, retrying...");
+          loadSearchData().then(() => {
+            if (searchData.length > 0) {
+              performSearch(query); // Retry search after data loads
+            }
+          });
+          return;
+        }
+
+        const results = searchData
+          .map((item) => ({
+            ...item,
+            relevance: calculateRelevance(item, query),
+          }))
+          .filter((item) => item.relevance > 0)
+          .sort((a, b) => b.relevance - a.relevance)
+          .slice(0, 10);
+
+        if (results.length === 0) {
+          searchResults.innerHTML = `
+            <div class="search-item">
+              <div class="result-title">No results found</div>
+              <div class="result-excerpt">Try different keywords or check spelling</div>
+            </div>`;
+        } else {
+          searchResults.innerHTML = results
+            .map((result) => {
+              const highlightedTitle = highlightText(result.title, query);
+              const excerpt = result.content.substring(0, 150);
+              const highlightedExcerpt = highlightText(excerpt, query);
+
+              return `
+                <div class="search-item" onclick="window.location.href='${result.url}'">
+                  <div class="result-title">${highlightedTitle}</div>
+                  <div class="result-excerpt">${highlightedExcerpt}...</div>
+                  ${result.category ? `<div class="result-category">${result.category}</div>` : ""}
+                </div>
+              `;
+            })
+            .join("");
+        }
+
+        searchOverlay.classList.add("active");
+      }
+
+      // Event listeners
+      if (searchInput) {
+        searchInput.addEventListener("input", function () {
+          const query = this.value;
+          clearTimeout(this.searchTimeout);
+          this.searchTimeout = setTimeout(() => performSearch(query), 300);
+        });
+
+        searchInput.addEventListener("focus", function () {
+          if (this.value.trim()) {
+            performSearch(this.value);
+          }
+        });
+      }
+
+      if (searchClose) {
+        searchClose.addEventListener("click", function () {
+          searchOverlay.classList.remove("active");
+          if (searchInput) searchInput.value = "";
+        });
+      }
+
+      if (searchOverlay) {
+        searchOverlay.addEventListener("click", function (e) {
+          if (e.target === searchOverlay) {
+            searchOverlay.classList.remove("active");
+          }
+        });
+      }
+
+      // Keyboard navigation
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          searchOverlay.classList.remove("active");
+          if (searchInput) searchInput.blur();
+        }
+
+        // Ctrl+K / Cmd+K to focus search
+        if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+          e.preventDefault();
+          if (searchInput) {
+            searchInput.focus();
+            searchInput.select();
+          }
+        }
+      });
+    </script>
+
+    <!-- i18n Helper -->
+    <script src="/assets/js/i18n-helper.js"></script>
+
+    <!-- Remove Google Translate feedback elements -->
+    <script>
+      // Function to remove Google Translate feedback elements
+      function removeGoogleTranslateFeedback() {
+        // Get all text nodes in the document
+        const walker = document.createTreeWalker(
+          document.body,
+          NodeFilter.SHOW_TEXT,
+          null,
+          false,
+        );
+
+        const nodesToRemove = [];
+        const textsToRemove = [
+          "Original text",
+          "Rate this translation",
+          "Your feedback will be used to help improve Google Translate",
+        ];
+
+        // Find text nodes containing unwanted text
+        while (walker.nextNode()) {
+          const node = walker.currentNode;
+          const text = node.textContent.trim();
+
+          if (
+            textsToRemove.some((unwantedText) => text.includes(unwantedText))
+          ) {
+            // Mark the parent element for removal
+            let parent = node.parentElement;
+            while (parent && parent !== document.body) {
+              // If this is a small container with only this text, remove it
+              if (parent.textContent.trim() === text) {
+                nodesToRemove.push(parent);
+                break;
+              }
+              parent = parent.parentElement;
+            }
+          }
+        }
+
+        // Remove the elements
+        nodesToRemove.forEach((node) => {
+          if (node && node.parentNode) {
+            node.parentNode.removeChild(node);
+          }
+        });
+
+        // Also hide any elements with specific Google Translate attributes
+        document
+          .querySelectorAll(
+            '[id*="goog-gt-"], [class*="goog-te-"], [class*="goog-gt-"]',
+          )
+          .forEach((el) => {
+            el.style.display = "none";
+          });
+      }
+
+      // Run on page load
+      window.addEventListener("load", function () {
+        removeGoogleTranslateFeedback();
+
+        // Run again after a delay to catch dynamically added elements
+        setTimeout(removeGoogleTranslateFeedback, 1000);
+        setTimeout(removeGoogleTranslateFeedback, 3000);
+
+        // Watch for DOM changes
+        const observer = new MutationObserver(function (mutations) {
+          removeGoogleTranslateFeedback();
+        });
+
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
+      });
+    </script>
+  </body>
+</html>

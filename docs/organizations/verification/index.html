@@ -1,0 +1,1973 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Security Headers -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://translate.google.com https://translate.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: blob: https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://translate.googleapis.com; frame-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+
+    <title>
+      Verification System Documentation - Give Protocol Documentation
+    </title>
+    <meta
+      name="description"
+      content="Comprehensive guide to Give Protocol's verification system for organizations, donors, and volunteers"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CBQHKLHD8T"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-CBQHKLHD8T");
+    </script>
+
+    <!-- Language detection -->
+     
+
+    <!-- Alternate language links for SEO -->
+     
+      
+     
+    <link
+      rel="alternate"
+      hreflang="es"
+      href="/docsorganizationsverificationes/"
+    />
+     
+     
+    <link
+      rel="alternate"
+      hreflang="zh"
+      href="/docsorganizationsverificationzh/"
+    />
+      
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/images/give_logo_gradient.svg"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=2026-03-19-v2" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Translate -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,es,de,fr,ja,zh-CN,zh-TW,th,vi,ko,ar,hi",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false,
+          },
+          "google_translate_element",
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </head>
+
+  <body class="modern-docs preload">
+    <script>
+      // Remove preload class after page loads to enable transitions
+      window.addEventListener("load", function () {
+        document.body.classList.remove("preload");
+      });
+    </script>
+    <!-- Hidden Google Translate Element -->
+    <div id="google_translate_element" style="display: none"></div>
+
+    <!-- Modern Header -->
+    <header class="modern-header">
+      <div class="header-container">
+        <a href="/" class="brand">
+          <img
+            src="/assets/images/give_logo_gradient.svg"
+            alt="Give Protocol"
+          />
+          <span>Give Protocol <em>Docs</em></span>
+        </a>
+
+        <div class="header-search">
+          <div class="search-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search documentation..."
+              data-translate="yes"
+              aria-label="Search documentation"
+            />
+            <kbd class="search-kbd">Ctrl K</kbd>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <a href="https://giveprotocol.io" class="btn-main-site" title="Go to main site">
+            <i class="fas fa-external-link-alt"></i>
+            <span>Main Site</span>
+          </a>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle light/dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+      <!-- Modern Sidebar -->
+      <aside class="modern-sidebar">
+        <button class="mobile-nav-toggle">
+          <span>Navigation</span>
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="sidebar-nav">
+          <!-- Dynamic navigation from data file -->
+          
+          <div class="nav-section">
+            <h3 class="section-title">
+              <i class="fas fa-rocket"></i>
+              Getting Started
+            </h3>
+            <ul class="nav-list">
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/getting-started/what-is-give-protocol/"
+                  class=""
+                >
+                  <i class="fas fa-info-circle"></i>
+                  What is Give Protocol?
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/getting-started/creating-account/"
+                  class=""
+                >
+                  <i class="fas fa-user-plus"></i>
+                  Creating Your Account
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/getting-started/setting-up-profile/"
+                  class=""
+                >
+                  <i class="fas fa-user-edit"></i>
+                  Setting Up Your Profile
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/getting-started/wallet-connection/"
+                  class=""
+                >
+                  <i class="fas fa-wallet"></i>
+                  Wallet Connection Guide
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/getting-started/first-steps/"
+                  class=""
+                >
+                  <i class="fas fa-play"></i>
+                  First Steps Walkthrough
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/getting-started/dashboard/"
+                  class=""
+                >
+                  <i class="fas fa-tachometer-alt"></i>
+                  Dashboard Overview
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          <div class="nav-section">
+            <h3 class="section-title">
+              <i class="fas fa-heart"></i>
+              For Donors
+            </h3>
+            <ul class="nav-list">
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/donors/making-donations/"
+                  class=""
+                >
+                  <i class="fas fa-hand-holding-heart"></i>
+                  Making Donations
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/donors/understanding-cefs/"
+                  class=""
+                >
+                  <i class="fas fa-university"></i>
+                  Understanding CEFs
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/donors/tracking-impact/"
+                  class=""
+                >
+                  <i class="fas fa-chart-line"></i>
+                  Tracking Your Impact
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/impact-methodology/"
+                  class=""
+                >
+                  <i class="fas fa-calculator"></i>
+                  Impact Methodology
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          <div class="nav-section">
+            <h3 class="section-title">
+              <i class="fas fa-building"></i>
+              For Organizations
+            </h3>
+            <ul class="nav-list">
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/organizations/verification/"
+                  class="active"
+                >
+                  <i class="fas fa-shield-alt"></i>
+                  Verification Process
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/organizations/receiving-funds/"
+                  class=""
+                >
+                  <i class="fas fa-coins"></i>
+                  Receiving Funds
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/organizations/reporting-tools/"
+                  class=""
+                >
+                  <i class="fas fa-chart-bar"></i>
+                  Reporting Tools
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/organizations/withdrawal-guide/"
+                  class=""
+                >
+                  <i class="fas fa-money-bill-wave"></i>
+                  Withdrawal Guide
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          <div class="nav-section">
+            <h3 class="section-title">
+              <i class="fas fa-hands-helping"></i>
+              For Volunteers
+            </h3>
+            <ul class="nav-list">
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/volunteers/finding-opportunities/"
+                  class=""
+                >
+                  <i class="fas fa-search"></i>
+                  Finding Opportunities
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/volunteers/time-tracking/"
+                  class=""
+                >
+                  <i class="fas fa-clock"></i>
+                  Time Tracking
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/volunteers/earning-credentials/"
+                  class=""
+                >
+                  <i class="fas fa-award"></i>
+                  Earning Credentials
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/volunteers/safety-guidelines/"
+                  class=""
+                >
+                  <i class="fas fa-hard-hat"></i>
+                  Safety Guidelines
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          <div class="nav-section">
+            <h3 class="section-title">
+              <i class="fas fa-code"></i>
+              Technical Reference
+            </h3>
+            <ul class="nav-list">
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/technical/smart-contracts/"
+                  class=""
+                >
+                  <i class="fas fa-file-contract"></i>
+                  Smart Contracts
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/technical/api-docs/"
+                  class=""
+                >
+                  <i class="fas fa-plug"></i>
+                  API Documentation
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/technical/security-model/"
+                  class=""
+                >
+                  <i class="fas fa-lock"></i>
+                  Security Model
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/technical/supported-tokens/"
+                  class=""
+                >
+                  <i class="fas fa-coins"></i>
+                  Supported Tokens
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          <div class="nav-section">
+            <h3 class="section-title">
+              <i class="fas fa-wrench"></i>
+              Troubleshooting
+            </h3>
+            <ul class="nav-list">
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/troubleshooting/account-issues/"
+                  class=""
+                >
+                  <i class="fas fa-user-cog"></i>
+                  Account Issues
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/troubleshooting/wallet-transactions/"
+                  class=""
+                >
+                  <i class="fas fa-wallet"></i>
+                  Wallet & Transactions
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/troubleshooting/donation-problems/"
+                  class=""
+                >
+                  <i class="fas fa-exclamation-circle"></i>
+                  Donation Problems
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  href="/docs/troubleshooting/platform-errors/"
+                  class=""
+                >
+                  <i class="fas fa-bug"></i>
+                  Platform Errors
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+
+          <!-- Support Section - Always at bottom -->
+          <div class="nav-section nav-section-support">
+            <h3 class="section-title">
+              <i class="fas fa-headset"></i>
+              Support
+            </h3>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a
+                  href="/docs/support/"
+                  class=""
+                >
+                  <i class="fas fa-life-ring"></i>
+                  Contact Support
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="modern-content">
+        <div class="content-card">
+          <!-- Breadcrumbs -->
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/" class="">Home</a>
+                
+            <span class="separator">/</span>
+            
+            <a
+              href="/docs/"
+            >
+              Docs
+            </a>
+               
+            <span class="separator">/</span>
+            
+            <a
+              href="/docs/organizations/"
+            >
+              Organizations
+            </a>
+               
+            <span class="separator">/</span>
+            
+            <span>Verification</span>
+              
+          </nav>
+
+          <article><p>This document provides detailed information about Give Protocol’s multi-tier verification system, which ensures trust, transparency, and security across the platform.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Give Protocol’s verification system establishes trust between donors, organizations, and volunteers through comprehensive identity validation, document verification, and ongoing compliance monitoring.</p>
+
+<h3 id="verification-benefits">Verification Benefits</h3>
+
+<ul>
+  <li><strong>For Organizations</strong>: Increased donor trust and higher donation rates</li>
+  <li><strong>For Donors</strong>: Confidence in legitimate charitable giving</li>
+  <li><strong>For Volunteers</strong>: Safe and verified opportunities</li>
+  <li><strong>For the Platform</strong>: Reduced fraud and enhanced reputation</li>
+</ul>
+
+<h2 id="verification-levels">Verification Levels</h2>
+
+<h3 id="basic-verification">Basic Verification</h3>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+  <li>Email confirmation</li>
+  <li>Phone number verification</li>
+  <li>Basic profile completion</li>
+  <li>Terms of service acceptance</li>
+</ul>
+
+<p><strong>Features Unlocked:</strong></p>
+
+<ul>
+  <li>Create and browse listings</li>
+  <li>Send and receive messages</li>
+  <li>Basic platform access</li>
+  <li>Limited transaction amounts</li>
+</ul>
+
+<h3 id="standard-verification">Standard Verification</h3>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+  <li>Government-issued ID</li>
+  <li>Address verification</li>
+  <li>Social media linking</li>
+  <li>Background check consent</li>
+</ul>
+
+<p><strong>Features Unlocked:</strong></p>
+
+<ul>
+  <li>Full platform features</li>
+  <li>Higher transaction limits</li>
+  <li>Priority support</li>
+  <li>Verification badge display</li>
+</ul>
+
+<h3 id="enhanced-verification">Enhanced Verification</h3>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+  <li>Video verification call</li>
+  <li>Professional references</li>
+  <li>Financial documentation</li>
+  <li>Extended background check</li>
+</ul>
+
+<p><strong>Features Unlocked:</strong></p>
+
+<ul>
+  <li>Premium features access</li>
+  <li>Unlimited transactions</li>
+  <li>API access</li>
+  <li>Custom integrations</li>
+</ul>
+
+<h2 id="organization-verification">Organization Verification</h2>
+
+<h3 id="nonprofit-status-verification">Nonprofit Status Verification</h3>
+
+<p><strong>Required Documents:</strong></p>
+
+<ol>
+  <li>
+    <p><strong>Tax-Exempt Status</strong></p>
+
+    <ul>
+      <li>IRS 501(c)(3) determination letter (US)</li>
+      <li>Charity registration (International)</li>
+      <li>Current tax-exempt certificate</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Governance Documents</strong></p>
+
+    <ul>
+      <li>Articles of incorporation</li>
+      <li>Bylaws</li>
+      <li>Board of directors list</li>
+      <li>Conflict of interest policy</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Financial Documentation</strong></p>
+    <ul>
+      <li>Recent Form 990 (US)</li>
+      <li>Audited financial statements</li>
+      <li>Annual report</li>
+      <li>Budget documentation</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="verification-process">Verification Process</h3>
+
+<pre><code class="language-mermaid">flowchart TD
+    A[Organization Applies] --&gt; B[Document Submission]
+    B --&gt; C{Initial Review}
+    C --&gt;|Pass| D[Database Verification]
+    C --&gt;|Fail| E[Request Additional Info]
+    E --&gt; B
+    D --&gt; F{Charity Database Check}
+    F --&gt;|Found| G[Financial Review]
+    F --&gt;|Not Found| H[Manual Review]
+    G --&gt; I{Compliance Check}
+    H --&gt; I
+    I --&gt;|Approved| J[Verified Status]
+    I --&gt;|Denied| K[Rejection Notice]
+    J --&gt; L[Annual Renewal]
+</code></pre>
+
+<h3 id="verification-status-reference">Verification Status Reference</h3>
+
+<p>Your organization’s verification status is visible on your charity profile and in the admin dashboard. The full set of statuses is:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Display</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pending</code></td>
+      <td>⏳ Pending Review</td>
+      <td>Application submitted; awaiting admin review. Donations can still be received but the Verified badge is not shown to donors.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">verified</code></td>
+      <td>✅ Verified</td>
+      <td>Admin has approved the organization. The Verified badge is displayed publicly on your profile and in search results.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">approved</code></td>
+      <td>✅ Approved</td>
+      <td>Legacy equivalent of <code class="language-plaintext highlighter-rouge">verified</code> — displayed the same way. New applications use <code class="language-plaintext highlighter-rouge">verified</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">rejected</code></td>
+      <td>❌ Not Verified</td>
+      <td>Application was reviewed and did not meet requirements. See the review notes in your portal for the reason. You may re-apply after addressing the stated issues.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">suspended</code></td>
+      <td>⚠️ Suspended</td>
+      <td>A previously verified organization has been suspended by an admin. The Verified badge is hidden from donors. Contact support to understand the reason and next steps.</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>Donors see:</strong> On public charity profiles, donors see either the green <strong>Verified</strong> badge (status <code class="language-plaintext highlighter-rouge">verified</code> or <code class="language-plaintext highlighter-rouge">approved</code>) or no badge at all. The specific status value (<code class="language-plaintext highlighter-rouge">pending</code>, <code class="language-plaintext highlighter-rouge">rejected</code>, <code class="language-plaintext highlighter-rouge">suspended</code>) is not shown to donors.</p>
+</blockquote>
+
+<h3 id="verification-timeline">Verification Timeline</h3>
+
+<ul>
+  <li><strong>Initial Application</strong>: 1-2 business days</li>
+  <li><strong>Document Review</strong>: 3-5 business days</li>
+  <li><strong>Database Verification</strong>: Automated</li>
+  <li><strong>Final Approval</strong>: 7-10 business days total</li>
+</ul>
+
+<h3 id="international-organizations">International Organizations</h3>
+
+<p><strong>Additional Requirements:</strong></p>
+
+<ul>
+  <li>Country-specific charity registration</li>
+  <li>Translated documents (certified)</li>
+  <li>International banking verification</li>
+  <li>Local compliance certificates</li>
+</ul>
+
+<p><strong>Supported Countries:</strong></p>
+
+<ul>
+  <li>United States</li>
+  <li>Canada</li>
+  <li>United Kingdom</li>
+  <li>Australia</li>
+  <li>European Union members</li>
+  <li>Additional countries evaluated case-by-case</li>
+</ul>
+
+<h2 id="donor-verification">Donor Verification</h2>
+
+<h3 id="identity-verification">Identity Verification</h3>
+
+<p><strong>Standard KYC Process:</strong></p>
+
+<ol>
+  <li>
+    <p><strong>Document Upload</strong></p>
+
+    <ul>
+      <li>Government-issued photo ID</li>
+      <li>Selfie with ID</li>
+      <li>Proof of address</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Automated Checks</strong></p>
+
+    <ul>
+      <li>Document authenticity</li>
+      <li>Facial recognition matching</li>
+      <li>Address validation</li>
+      <li>Sanctions screening</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Risk Assessment</strong></p>
+    <ul>
+      <li>Transaction history analysis</li>
+      <li>Behavioral patterns</li>
+      <li>Geographic risk factors</li>
+      <li>PEP screening</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="verification-tiers">Verification Tiers</h3>
+
+<p><strong>Tier 1 - Basic ($0-$1,000/year)</strong></p>
+
+<ul>
+  <li>Email verification only</li>
+  <li>No documentation required</li>
+  <li>Anonymous donations allowed</li>
+</ul>
+
+<p><strong>Tier 2 - Standard ($1,001-$10,000/year)</strong></p>
+
+<ul>
+  <li>ID verification required</li>
+  <li>Address confirmation</li>
+  <li>Source of funds declaration</li>
+</ul>
+
+<p><strong>Tier 3 - Enhanced ($10,001+/year)</strong></p>
+
+<ul>
+  <li>Enhanced due diligence</li>
+  <li>Wealth verification</li>
+  <li>Ongoing monitoring</li>
+  <li>Dedicated support</li>
+</ul>
+
+<h3 id="privacy-protection">Privacy Protection</h3>
+
+<p><strong>Data Handling:</strong></p>
+
+<ul>
+  <li>End-to-end encryption</li>
+  <li>Minimal data retention</li>
+  <li>GDPR/CCPA compliant</li>
+  <li>Right to deletion</li>
+</ul>
+
+<p><strong>Anonymity Options:</strong></p>
+
+<ul>
+  <li>Anonymous donations under thresholds</li>
+  <li>Pseudonymous giving</li>
+  <li>Private donor advised funds</li>
+  <li>Blockchain-based privacy</li>
+</ul>
+
+<h2 id="volunteer-verification">Volunteer Verification</h2>
+
+<h3 id="background-checks">Background Checks</h3>
+
+<p><strong>Standard Screening:</strong></p>
+
+<ul>
+  <li>Identity verification</li>
+  <li>Criminal background check</li>
+  <li>Sex offender registry</li>
+  <li>Reference checks</li>
+</ul>
+
+<p><strong>Enhanced Screening (for sensitive roles):</strong></p>
+
+<ul>
+  <li>FBI fingerprinting</li>
+  <li>Child abuse clearances</li>
+  <li>Professional license verification</li>
+  <li>Drug screening (if required)</li>
+</ul>
+
+<h3 id="skills-verification">Skills Verification</h3>
+
+<p><strong>Professional Skills:</strong></p>
+
+<ul>
+  <li>License verification</li>
+  <li>Certification validation</li>
+  <li>Portfolio review</li>
+  <li>Skill assessments</li>
+</ul>
+
+<p><strong>Verification Partners:</strong></p>
+
+<ul>
+  <li>Sterling background checks</li>
+  <li>Checkr integration</li>
+  <li>Professional boards</li>
+  <li>Educational institutions</li>
+</ul>
+
+<h2 id="technical-implementation">Technical Implementation</h2>
+
+<h3 id="verification-api">Verification API</h3>
+
+<p><strong>Initiate Verification:</strong></p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST /api/v1/verification/initiate
+Authorization: Bearer your_api_key
+Content-Type: application/json
+
+{
+  "entity_type": "organization",
+  "entity_id": "org_123abc",
+  "verification_level": "standard",
+  "documents": [
+    {
+      "type": "501c3_letter",
+      "url": "https://secure.give.io/docs/..."
+    }
+  ]
+}
+</span></code></pre></div></div>
+
+<p><strong>Check Status:</strong></p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET /api/v1/verification/status/{entity_id}
+Authorization: Bearer your_api_key
+
+Response:
+{
+  "entity_id": "org_123abc",
+  "status": "in_review",
+  "level": "standard",
+  "checks": {
+    "identity": "completed",
+    "documents": "in_review",
+    "database": "pending"
+  },
+  "estimated_completion": "2024-01-20T10:00:00Z"
+}
+</span></code></pre></div></div>
+
+<h3 id="webhook-events">Webhook Events</h3>
+
+<p><strong>Verification Events:</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Verification completed</span>
+<span class="p">{</span>
+  <span class="dl">"</span><span class="s2">event</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">verification.completed</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">entity_id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">org_123abc</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">entity_type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">organization</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">level</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">standard</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">status</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">approved</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">expires_at</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2025-01-15T00:00:00Z</span><span class="dl">"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Verification failed</span>
+<span class="p">{</span>
+  <span class="dl">"</span><span class="s2">event</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">verification.failed</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">entity_id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">org_123abc</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">reason</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Invalid documentation</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">required_actions</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="dl">"</span><span class="s2">Submit updated 501c3 letter</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">Provide board resolution</span><span class="dl">"</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="sdk-integration">SDK Integration</h3>
+
+<p><strong>JavaScript Example:</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Verification</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@give-protocol/sdk</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">verification</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Verification</span><span class="p">({</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">your_api_key</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// Start organization verification</span>
+<span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">verification</span><span class="p">.</span><span class="nf">initiate</span><span class="p">({</span>
+  <span class="na">entityType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">organization</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">entityId</span><span class="p">:</span> <span class="dl">"</span><span class="s2">org_123</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">documents</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">501c3</span><span class="dl">"</span><span class="p">,</span> <span class="na">file</span><span class="p">:</span> <span class="nx">file1</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">board_list</span><span class="dl">"</span><span class="p">,</span> <span class="na">file</span><span class="p">:</span> <span class="nx">file2</span> <span class="p">},</span>
+  <span class="p">],</span>
+<span class="p">});</span>
+
+<span class="c1">// Monitor progress</span>
+<span class="kd">const</span> <span class="nx">status</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">verification</span><span class="p">.</span><span class="nf">getStatus</span><span class="p">(</span><span class="dl">"</span><span class="s2">org_123</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s2">`Verification </span><span class="p">${</span><span class="nx">status</span><span class="p">.</span><span class="nx">complete</span> <span class="p">?</span> <span class="dl">"</span><span class="s2">completed</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">in progress</span><span class="dl">"</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="verification-standards">Verification Standards</h2>
+
+<h3 id="document-requirements">Document Requirements</h3>
+
+<p><strong>Acceptable Formats:</strong></p>
+
+<ul>
+  <li>PDF (preferred)</li>
+  <li>JPG/PNG (for IDs)</li>
+  <li>DOC/DOCX (for letters)</li>
+  <li>Maximum file size: 10MB</li>
+</ul>
+
+<p><strong>Document Quality:</strong></p>
+
+<ul>
+  <li>Clear and legible</li>
+  <li>Complete documents only</li>
+  <li>Recent dates (within 12 months)</li>
+  <li>Official letterhead required</li>
+</ul>
+
+<h3 id="compliance-framework">Compliance Framework</h3>
+
+<p><strong>Regulatory Compliance:</strong></p>
+
+<ul>
+  <li>FinCEN guidelines</li>
+  <li>OFAC screening</li>
+  <li>State regulations</li>
+  <li>International standards</li>
+</ul>
+
+<p><strong>Industry Standards:</strong></p>
+
+<ul>
+  <li>FATF recommendations</li>
+  <li>ISO 27001 certification</li>
+  <li>SOC 2 Type II compliance</li>
+  <li>PCI DSS for payments</li>
+</ul>
+
+<h2 id="verification-maintenance">Verification Maintenance</h2>
+
+<h3 id="renewal-requirements">Renewal Requirements</h3>
+
+<p><strong>Annual Review:</strong></p>
+
+<ul>
+  <li>Updated documentation</li>
+  <li>Continued compliance</li>
+  <li>Activity verification</li>
+  <li>Fee payment (if applicable)</li>
+</ul>
+
+<p><strong>Triggers for Re-verification:</strong></p>
+
+<ul>
+  <li>Change in leadership</li>
+  <li>Address changes</li>
+  <li>Suspicious activity</li>
+  <li>Regulatory updates</li>
+</ul>
+
+<h3 id="verification-revocation">Verification Revocation</h3>
+
+<p><strong>Grounds for Revocation:</strong></p>
+
+<ul>
+  <li>Fraudulent documentation</li>
+  <li>Criminal activity</li>
+  <li>Terms of service violations</li>
+  <li>Regulatory non-compliance</li>
+</ul>
+
+<p><strong>Revocation Process:</strong></p>
+
+<ol>
+  <li>Notice of concern</li>
+  <li>Opportunity to remedy</li>
+  <li>Final determination</li>
+  <li>Appeal process</li>
+</ol>
+
+<h2 id="trust-indicators">Trust Indicators</h2>
+
+<h3 id="verification-badges">Verification Badges</h3>
+
+<p><strong>Badge Types:</strong></p>
+
+<ul>
+  <li>Basic Verified ✓</li>
+  <li>Standard Verified ✓✓</li>
+  <li>Enhanced Verified ✓✓✓</li>
+  <li>Specialized badges (e.g., “Child Safety Verified”)</li>
+</ul>
+
+<p><strong>Display Guidelines:</strong></p>
+
+<ul>
+  <li>Prominent profile placement</li>
+  <li>Search result indicators</li>
+  <li>Transaction confirmations</li>
+  <li>Marketing materials</li>
+</ul>
+
+<h3 id="trust-score">Trust Score</h3>
+
+<p><strong>Calculation Factors:</strong></p>
+
+<ul>
+  <li>Verification level</li>
+  <li>Platform history</li>
+  <li>User feedback</li>
+  <li>Compliance record</li>
+  <li>Update frequency</li>
+</ul>
+
+<p><strong>Score Ranges:</strong></p>
+
+<ul>
+  <li>0-40: New/Unverified</li>
+  <li>41-70: Basic Trust</li>
+  <li>71-90: High Trust</li>
+  <li>91-100: Exceptional Trust</li>
+</ul>
+
+<h2 id="fraud-prevention">Fraud Prevention</h2>
+
+<h3 id="detection-systems">Detection Systems</h3>
+
+<p><strong>Automated Monitoring:</strong></p>
+
+<ul>
+  <li>Pattern recognition</li>
+  <li>Anomaly detection</li>
+  <li>Cross-reference checking</li>
+  <li>Real-time alerts</li>
+</ul>
+
+<p><strong>Red Flags:</strong></p>
+
+<ul>
+  <li>Duplicate applications</li>
+  <li>Mismatched information</li>
+  <li>Suspicious documentation</li>
+  <li>Unusual activity patterns</li>
+</ul>
+
+<h3 id="response-procedures">Response Procedures</h3>
+
+<p><strong>Investigation Process:</strong></p>
+
+<ol>
+  <li>Automated flag trigger</li>
+  <li>Manual review initiation</li>
+  <li>Entity notification</li>
+  <li>Evidence collection</li>
+  <li>Decision and action</li>
+</ol>
+
+<p><strong>Protective Actions:</strong></p>
+
+<ul>
+  <li>Account suspension</li>
+  <li>Transaction holds</li>
+  <li>Enhanced monitoring</li>
+  <li>Law enforcement referral</li>
+</ul>
+
+<h2 id="support-and-appeals">Support and Appeals</h2>
+
+<h3 id="verification-support">Verification Support</h3>
+
+<p><strong>Help Resources:</strong></p>
+
+<ul>
+  <li>Detailed guides</li>
+  <li>Video tutorials</li>
+  <li>Live chat support</li>
+  <li>Email assistance</li>
+</ul>
+
+<p><strong>Common Issues:</strong></p>
+
+<ul>
+  <li>Document quality</li>
+  <li>Missing information</li>
+  <li>Technical problems</li>
+  <li>Timeline concerns</li>
+</ul>
+
+<h3 id="appeals-process">Appeals Process</h3>
+
+<p><strong>Filing an Appeal:</strong></p>
+
+<ol>
+  <li>Submit appeal form</li>
+  <li>Provide new documentation</li>
+  <li>Explain circumstances</li>
+  <li>Await review</li>
+</ol>
+
+<p><strong>Appeal Timeline:</strong></p>
+
+<ul>
+  <li>Initial review: 48 hours</li>
+  <li>Full review: 5-7 business days</li>
+  <li>Final decision: 10 business days</li>
+</ul>
+
+<h2 id="best-practices">Best Practices</h2>
+
+<h3 id="for-organizations">For Organizations</h3>
+
+<ol>
+  <li>
+    <p><strong>Prepare Documents Early</strong></p>
+
+    <ul>
+      <li>Gather all required documents</li>
+      <li>Ensure current dates</li>
+      <li>Verify document quality</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Maintain Compliance</strong></p>
+
+    <ul>
+      <li>Update documents annually</li>
+      <li>Report changes promptly</li>
+      <li>Keep records organized</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Build Trust Gradually</strong></p>
+    <ul>
+      <li>Start with basic verification</li>
+      <li>Add enhanced features over time</li>
+      <li>Maintain active presence</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="for-donors">For Donors</h3>
+
+<ol>
+  <li>
+    <p><strong>Verify at Appropriate Level</strong></p>
+
+    <ul>
+      <li>Match verification to giving level</li>
+      <li>Provide accurate information</li>
+      <li>Keep documents updated</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Protect Your Privacy</strong></p>
+    <ul>
+      <li>Understand data usage</li>
+      <li>Use privacy features</li>
+      <li>Report concerns promptly</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="for-developers">For Developers</h3>
+
+<ol>
+  <li>
+    <p><strong>Implement Properly</strong></p>
+
+    <ul>
+      <li>Use webhooks for updates</li>
+      <li>Handle errors gracefully</li>
+      <li>Cache verification status</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Maintain Security</strong></p>
+    <ul>
+      <li>Encrypt sensitive data</li>
+      <li>Use secure connections</li>
+      <li>Follow best practices</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="future-enhancements">Future Enhancements</h2>
+
+<h3 id="planned-features">Planned Features</h3>
+
+<ul>
+  <li>Blockchain-based verification</li>
+  <li>AI-powered document review</li>
+  <li>Biometric authentication</li>
+  <li>Decentralized identity support</li>
+</ul>
+
+<h3 id="research-initiatives">Research Initiatives</h3>
+
+<ul>
+  <li>Zero-knowledge proofs</li>
+  <li>Self-sovereign identity</li>
+  <li>Cross-platform verification</li>
+  <li>Global standards alignment</li>
+</ul>
+</article>
+
+          <!-- Page Actions -->
+          <div class="page-actions">
+            
+
+            <div class="last-updated">
+              Last updated: April 19, 2026
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="modern-footer site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="/safety-security/cookie-policy/">Cookie Policy</a>
+          <a href="/safety-security/platform-security/">Privacy Policy</a>
+          <a href="/help-center/need-help/">Contact Us</a>
+          <a href="https://giveprotocol.io" target="_blank" rel="noopener">Main Website</a>
+        </div>
+        <div class="footer-text">
+          <p>Copyright &copy; <span id="footer-year"></span> Give Protocol. All rights reserved.</p>
+          <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Search Results Overlay -->
+    <div class="search-results-overlay" id="search-overlay">
+      <div class="search-results-container">
+        <div class="search-header">
+          <h3>Search Results</h3>
+          <button class="close-search" id="close-search" title="Close search results">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div id="search-results"></div>
+        <div class="search-shortcuts">
+          <div class="shortcut"><kbd>↑</kbd><kbd>↓</kbd> Navigate</div>
+          <div class="shortcut"><kbd>Enter</kbd> Select</div>
+          <div class="shortcut"><kbd>Esc</kbd> Close</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      /* global google */
+
+      // Mobile nav toggle
+      const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
+      const sidebarNav = document.querySelector(".sidebar-nav");
+
+      mobileNavToggle.addEventListener("click", () => {
+        sidebarNav.style.display =
+          sidebarNav.style.display === "none" ? "block" : "none";
+      });
+
+      // Header scroll effect
+      const header = document.querySelector(".modern-header");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 10) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+      // Dark mode toggle
+      const themeToggle = document.getElementById("theme-toggle");
+      const themeIcon = themeToggle.querySelector("i");
+
+      // Check for saved theme preference or default to light mode
+      const savedTheme = localStorage.getItem("theme") || "light";
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        themeIcon.classList.remove("fa-moon");
+        themeIcon.classList.add("fa-sun");
+      }
+
+      // Toggle theme on button click
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        const isDark = document.body.classList.contains("dark-mode");
+
+        // Update icon
+        if (isDark) {
+          themeIcon.classList.remove("fa-moon");
+          themeIcon.classList.add("fa-sun");
+          localStorage.setItem("theme", "dark");
+        } else {
+          themeIcon.classList.remove("fa-sun");
+          themeIcon.classList.add("fa-moon");
+          localStorage.setItem("theme", "light");
+        }
+      });
+    </script>
+
+    <!-- Inline critical styles -->
+    <style>
+      /* Navigation icon styles */
+      .nav-item a i {
+        margin-right: 0.5rem;
+        width: 1rem;
+        text-align: center;
+        color: var(--color-text-tertiary);
+        transition: color 0.2s ease;
+        font-size: 0.8125rem;
+      }
+
+      .nav-item a:hover i,
+      .nav-item a.active i {
+        color: var(--emerald-600);
+      }
+
+      /* Header search icon — hardcoded so dark mode doesn't affect it */
+      .search-icon {
+        position: absolute;
+        left: 0.875rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #94a3b8;
+        font-size: 0.8125rem;
+        pointer-events: none;
+      }
+
+      /* Ctrl+K kbd badge */
+      .search-kbd {
+        position: absolute;
+        right: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+        padding: 3px 6px;
+        background: #f1f5f9;
+        border: 1px solid #e2e8f0;
+        border-radius: 4px;
+        font-size: 0.75rem; /* min 12px for readability at 320px viewport */
+        font-family: inherit;
+        color: #94a3b8;
+        pointer-events: none;
+        line-height: 1.6;
+      }
+
+      /* Theme toggle — hardcoded colors for white header */
+      .theme-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        padding: 5px; /* WCAG 2.5.5: brings effective tap area to 44×44px */
+        cursor: pointer;
+        background: transparent !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+      }
+
+      .theme-toggle:hover {
+        background-color: #f8fafc !important;
+        border-color: #cbd5e1 !important;
+      }
+
+      .theme-toggle i,
+      .theme-toggle i.fas {
+        font-size: 0.9375rem !important;
+        transition: transform 0.3s ease, color 0.3s ease;
+        font-weight: 900 !important;
+      }
+
+      .theme-toggle i.fa-moon {
+        color: #64748b !important;
+      }
+
+      body.dark-mode .theme-toggle i.fa-sun {
+        color: #f59e0b !important;
+      }
+
+      .theme-toggle:hover i {
+        transform: scale(1.1);
+      }
+
+      .mobile-nav-toggle i {
+        color: var(--color-text-tertiary);
+        font-size: 1rem;
+      }
+
+      .edit-link i {
+        margin-right: 0.375rem;
+        font-size: 0.875rem;
+      }
+
+      .close-search i {
+        color: #6b7280;
+        font-size: 1rem;
+        transition: color 0.2s ease;
+      }
+
+      .close-search:hover i {
+        color: #dc2626;
+      }
+
+      /* Dark mode — sidebar icon colors */
+      body.dark-mode .nav-item a i {
+        color: #9ca3af;
+      }
+
+      body.dark-mode .nav-item a:hover i,
+      body.dark-mode .nav-item a.active i {
+        color: var(--emerald-400);
+      }
+
+      /* Header icons stay the same in dark mode (white header) */
+
+      body.dark-mode .close-search i {
+        color: #9ca3af;
+      }
+
+      body.dark-mode .close-search:hover i {
+        color: #f87171;
+      }
+
+      /* Search result items */
+      .search-item {
+        padding: 1rem;
+        border-bottom: 1px solid #e5e7eb;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      .search-item:hover {
+        background-color: #f9fafb;
+      }
+
+      .search-item:last-child {
+        border-bottom: none;
+      }
+
+      .result-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 0.375rem;
+        line-height: 1.4;
+      }
+
+      .result-excerpt {
+        color: #6b7280;
+        font-size: 0.8125rem;
+        line-height: 1.5;
+        margin-bottom: 0.25rem;
+      }
+
+      .result-category {
+        color: #059669;
+        font-size: 0.6875rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      mark {
+        background-color: #d1fae5;
+        color: #065f46;
+        padding: 0.125rem 0.25rem;
+        border-radius: 0.25rem;
+        font-weight: 600;
+      }
+
+      /* Dark mode search */
+      body.dark-mode .search-item {
+        border-bottom-color: #374151;
+      }
+
+      body.dark-mode .search-item:hover {
+        background-color: #374151;
+      }
+
+      body.dark-mode .result-title {
+        color: #f3f4f6;
+      }
+
+      body.dark-mode .result-excerpt {
+        color: #9ca3af;
+      }
+
+      body.dark-mode .result-category {
+        color: #34d399;
+      }
+
+      body.dark-mode mark {
+        background-color: rgba(16, 185, 129, 0.2);
+        color: #6ee7b7;
+      }
+
+      /* Footer */
+      .modern-footer {
+        margin-top: 4rem;
+        padding: 2.5rem 0;
+        border-top: 1px solid var(--color-border-primary);
+        background-color: transparent;
+        width: 100% !important;
+        position: relative;
+        left: 0;
+        right: 0;
+        clear: both;
+      }
+
+      .modern-footer .footer-content {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 1.5rem;
+        text-align: center !important;
+      }
+
+      .modern-footer .footer-links {
+        display: flex !important;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center !important;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      .modern-footer .footer-links a {
+        color: var(--color-text-tertiary);
+        text-decoration: none;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        transition: color 0.2s ease;
+      }
+
+      .modern-footer .footer-links a:hover {
+        color: var(--emerald-600);
+      }
+
+      .modern-footer .footer-text {
+        text-align: center !important;
+        color: var(--color-text-tertiary);
+        font-size: 0.8125rem;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .modern-footer .footer-text p {
+        margin: 0;
+        text-align: center !important;
+      }
+
+      /* Dark mode footer */
+      body.dark-mode .modern-footer {
+        border-top-color: #374151;
+      }
+
+      @media (max-width: 768px) {
+        .modern-footer .footer-links {
+          flex-direction: column !important;
+          align-items: center;
+          gap: 0.75rem;
+        }
+
+        .modern-footer .footer-content {
+          padding: 0 1.5rem;
+        }
+      }
+
+      /* Hide Google Translate elements */
+      .goog-te-banner-frame,
+      .goog-te-gadget,
+      .goog-te-ftab,
+      .goog-logo-link,
+      .goog-te-balloon-frame,
+      .goog-te-combo,
+      div:has(> [aria-label*="Google Translate"]),
+      [aria-label*="Google Translate"],
+      [aria-label*="Original text"],
+      [aria-label*="Rate this translation"],
+      div[style*="position: fixed"][style*="z-index"]:has(
+          [aria-label*="Google"]
+        ),
+      iframe[src*="translate.googleapis.com"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        position: absolute !important;
+        left: -9999px !important;
+      }
+
+      /* Override conflicting styles */
+      footer.modern-footer {
+        display: block !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: center !important;
+      }
+
+      footer.modern-footer .footer-content {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        max-width: 1280px !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+      }
+    </style>
+
+    <!-- Enhanced Search Scripts -->
+    <script>
+      // Enhanced search functionality
+      const searchInput = document.getElementById("search-input");
+      const searchOverlay = document.getElementById("search-overlay");
+      const searchResults = document.getElementById("search-results");
+      const searchClose = document.getElementById("close-search");
+
+      let searchData = [];
+
+      // Load search data with multiple fallback strategies
+      async function loadSearchData() {
+        const possibleUrls = [
+          '/search.json',
+          "/search.json",
+          "./search.json",
+          "../search.json",
+          "../../search.json",
+        ];
+
+        for (const url of possibleUrls) {
+          try {
+            console.log(`Trying to load search data from: ${url}`);
+            const response = await fetch(url);
+            if (response.ok) {
+              const data = await response.json();
+              searchData = data;
+              console.log(
+                `Search data loaded successfully from: ${url} (${data.length} items)`,
+              );
+              return;
+            }
+          } catch (error) {
+            console.log(`Failed to load from ${url}:`, error.message);
+          }
+        }
+
+        // Final fallback: Create basic search data from navigation
+        console.log("Using navigation fallback for search data");
+        const navLinks = document.querySelectorAll(".nav-item a");
+        searchData = Array.from(navLinks).map((link) => ({
+          title: link.textContent.trim(),
+          url: link.getAttribute("href"),
+          content: link.textContent.trim(),
+          category: "Navigation",
+        }));
+        console.log(
+          `Fallback search data created (${searchData.length} items)`,
+        );
+      }
+
+      // Initialize search data
+      loadSearchData();
+
+      function highlightText(text, query) {
+        if (!query) return text;
+        const regex = new RegExp(
+          `(${query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`,
+          "gi",
+        );
+        return text.replace(regex, "<mark>$1</mark>");
+      }
+
+      function calculateRelevance(item, query) {
+        const lowerQuery = query.toLowerCase();
+        const lowerTitle = item.title.toLowerCase();
+        const lowerContent = item.content.toLowerCase();
+
+        let score = 0;
+
+        // Title exact match gets highest score
+        if (lowerTitle === lowerQuery) score += 100;
+        // Title starts with query
+        else if (lowerTitle.startsWith(lowerQuery)) score += 50;
+        // Title contains query
+        else if (lowerTitle.includes(lowerQuery)) score += 25;
+
+        // Content matches
+        if (lowerContent.includes(lowerQuery)) score += 10;
+
+        // Multiple word matches
+        const queryWords = lowerQuery
+          .split(" ")
+          .filter((word) => word.length > 2);
+        queryWords.forEach((word) => {
+          if (lowerTitle.includes(word)) score += 5;
+          if (lowerContent.includes(word)) score += 2;
+        });
+
+        return score;
+      }
+
+      function performSearch(query) {
+        if (!query || query.length < 2) {
+          searchOverlay.classList.remove("active");
+          return;
+        }
+
+        if (searchData.length === 0) {
+          console.log("Search data not loaded, retrying...");
+          loadSearchData().then(() => {
+            if (searchData.length > 0) {
+              performSearch(query); // Retry search after data loads
+            }
+          });
+          return;
+        }
+
+        const results = searchData
+          .map((item) => ({
+            ...item,
+            relevance: calculateRelevance(item, query),
+          }))
+          .filter((item) => item.relevance > 0)
+          .sort((a, b) => b.relevance - a.relevance)
+          .slice(0, 10);
+
+        if (results.length === 0) {
+          searchResults.innerHTML = `
+            <div class="search-item">
+              <div class="result-title">No results found</div>
+              <div class="result-excerpt">Try different keywords or check spelling</div>
+            </div>`;
+        } else {
+          searchResults.innerHTML = results
+            .map((result) => {
+              const highlightedTitle = highlightText(result.title, query);
+              const excerpt = result.content.substring(0, 150);
+              const highlightedExcerpt = highlightText(excerpt, query);
+
+              return `
+                <div class="search-item" onclick="window.location.href='${result.url}'">
+                  <div class="result-title">${highlightedTitle}</div>
+                  <div class="result-excerpt">${highlightedExcerpt}...</div>
+                  ${result.category ? `<div class="result-category">${result.category}</div>` : ""}
+                </div>
+              `;
+            })
+            .join("");
+        }
+
+        searchOverlay.classList.add("active");
+      }
+
+      // Event listeners
+      if (searchInput) {
+        searchInput.addEventListener("input", function () {
+          const query = this.value;
+          clearTimeout(this.searchTimeout);
+          this.searchTimeout = setTimeout(() => performSearch(query), 300);
+        });
+
+        searchInput.addEventListener("focus", function () {
+          if (this.value.trim()) {
+            performSearch(this.value);
+          }
+        });
+      }
+
+      if (searchClose) {
+        searchClose.addEventListener("click", function () {
+          searchOverlay.classList.remove("active");
+          if (searchInput) searchInput.value = "";
+        });
+      }
+
+      if (searchOverlay) {
+        searchOverlay.addEventListener("click", function (e) {
+          if (e.target === searchOverlay) {
+            searchOverlay.classList.remove("active");
+          }
+        });
+      }
+
+      // Keyboard navigation
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          searchOverlay.classList.remove("active");
+          if (searchInput) searchInput.blur();
+        }
+
+        // Ctrl+K / Cmd+K to focus search
+        if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+          e.preventDefault();
+          if (searchInput) {
+            searchInput.focus();
+            searchInput.select();
+          }
+        }
+      });
+    </script>
+
+    <!-- i18n Helper -->
+    <script src="/assets/js/i18n-helper.js"></script>
+
+    <!-- Remove Google Translate feedback elements -->
+    <script>
+      // Function to remove Google Translate feedback elements
+      function removeGoogleTranslateFeedback() {
+        // Get all text nodes in the document
+        const walker = document.createTreeWalker(
+          document.body,
+          NodeFilter.SHOW_TEXT,
+          null,
+          false,
+        );
+
+        const nodesToRemove = [];
+        const textsToRemove = [
+          "Original text",
+          "Rate this translation",
+          "Your feedback will be used to help improve Google Translate",
+        ];
+
+        // Find text nodes containing unwanted text
+        while (walker.nextNode()) {
+          const node = walker.currentNode;
+          const text = node.textContent.trim();
+
+          if (
+            textsToRemove.some((unwantedText) => text.includes(unwantedText))
+          ) {
+            // Mark the parent element for removal
+            let parent = node.parentElement;
+            while (parent && parent !== document.body) {
+              // If this is a small container with only this text, remove it
+              if (parent.textContent.trim() === text) {
+                nodesToRemove.push(parent);
+                break;
+              }
+              parent = parent.parentElement;
+            }
+          }
+        }
+
+        // Remove the elements
+        nodesToRemove.forEach((node) => {
+          if (node && node.parentNode) {
+            node.parentNode.removeChild(node);
+          }
+        });
+
+        // Also hide any elements with specific Google Translate attributes
+        document
+          .querySelectorAll(
+            '[id*="goog-gt-"], [class*="goog-te-"], [class*="goog-gt-"]',
+          )
+          .forEach((el) => {
+            el.style.display = "none";
+          });
+      }
+
+      // Run on page load
+      window.addEventListener("load", function () {
+        removeGoogleTranslateFeedback();
+
+        // Run again after a delay to catch dynamically added elements
+        setTimeout(removeGoogleTranslateFeedback, 1000);
+        setTimeout(removeGoogleTranslateFeedback, 3000);
+
+        // Watch for DOM changes
+        const observer = new MutationObserver(function (mutations) {
+          removeGoogleTranslateFeedback();
+        });
+
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
+      });
+    </script>
+  </body>
+</html>
