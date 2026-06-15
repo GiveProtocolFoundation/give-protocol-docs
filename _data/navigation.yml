@@ -104,6 +104,13 @@ sections:
         url: "/docs/troubleshooting/platform-errors/"
         icon: "fa-bug"
 
+  - title: "Help Center"
+    icon: "fa-life-ring"
+    items:
+      - title: "Need Help?"
+        url: "/help-center/need-help/"
+        icon: "fa-headset"
+
 # Popular articles for the support page (tracked by views)
 popular_articles:
   - title: "Wallet Connection Guide"
