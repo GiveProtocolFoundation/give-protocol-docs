@@ -30,23 +30,24 @@ If a charity you care about hasn't been claimed yet, you can **nominate** them �
 ### Donating by Card (Fiat)
 
 1. Navigate to the charity's profile page.
-2. In the donate widget (right sidebar on desktop), enter your donation amount.
-3. Select your payment method — card payment is processed through Helcim (USD) or PayPal (international currencies).
-4. Complete the payment in the secure hosted payment form.
-5. You'll receive a receipt with the charity's name, your donation amount, and a reference number prefixed with "GP-."
+2. Click **Give Once** or **Give Monthly**, then toggle to **Card**.
+3. Enter your name, email, and donation amount.
+4. Confirm your age (16+) and check the donation data consent box (required for all donations — [learn what it means](/docs/donors/making-donations/#donation-data-consent)).
+5. Click **Donate** and complete payment in the secure Helcim window (USD) or PayPal (other currencies).
+6. You'll receive a receipt by email with the charity's name, Tax ID, your donation amount, and tax-deductibility information.
 
-No wallet or crypto knowledge is required. Give Protocol charges a 0.5% platform fee on direct fiat donations, plus the payment processor's standard fee (charged by Helcim or PayPal, not by Give Protocol).
+No wallet or crypto knowledge is required. For the full walkthrough, see [Making a Donation](/docs/donors/making-donations/).
 
 ### Donating with Crypto
 
-1. Make sure your wallet is connected and set to the network you want to donate on (Moonbeam, Base, or Optimism).
+1. Make sure your wallet is connected and set to Base, Optimism, or Moonbeam.
 2. Navigate to the charity's profile page.
-3. In the donate widget, select the token you'd like to donate. The widget shows only tokens available on your connected network.
-4. Enter the amount. A gas fee estimate will appear before you confirm.
+3. Click **Give Once** or **Give Monthly**, then toggle to **Wallet**.
+4. Select a token and enter your amount. Check the donation data consent box.
 5. Click **Donate** and confirm the transaction in your wallet.
-6. The smart contract routes your donation directly to the charity's wallet. A `DonationProcessed` event is recorded on-chain — you can verify the transaction on a block explorer.
+6. The smart contract routes your donation directly to the charity's wallet, recorded on-chain for transparency.
 
-Give Protocol charges a 0.5% platform fee on direct crypto donations, deducted automatically by the smart contract. You also pay the blockchain network's gas fee.
+For a complete walkthrough including wallet setup and gas fees, see the [Crypto Giving Guide](/docs/donors/crypto-giving/).
 
 ### Supported Tokens
 
