@@ -1,352 +1,121 @@
 ---
-title: Donors
-description: Complete guide for donors using Give Protocol to make charitable donations
+title: Making a Donation
+description: How to donate to a charity on Give Protocol — by card, PayPal, or cryptocurrency. Covers finding an organization, the payment flow, and what to expect.
 permalink: /docs/donors/making-donations/
 ---
 
-Welcome to the comprehensive guide for donors on Give Protocol. Whether you're new to cryptocurrency giving or an experienced philanthropist, this guide will help you maximize your impact while giving securely and efficiently.
+# Making a Donation
 
-## Getting Started as a Donor
+Give Protocol supports two ways to donate: **by card** (credit or debit) and **by crypto** (from a connected wallet). You don't need both — pick whichever works for you.
 
-### Your Donor Journey
+This page walks through the card (fiat) donation flow. For crypto donations, see the [Crypto Giving Guide](/docs/donors/crypto-giving/).
 
-1. **Create Account** - Set up your donor profile
-2. **Connect Wallet** - Link your cryptocurrency wallet
-3. **Discover Causes** - Find organizations you care about
-4. **Make Donations** - Start giving to verified organizations
-5. **Track Impact** - Monitor your charitable giving over time
+## Find a Charity
 
-### First-Time Setup
+1. From the homepage or navigation bar, click **Browse** or use the search bar.
+2. Search by organization name, Tax ID, location, or cause category (e.g., Education, Health, Environment).
+3. Click on a charity to open its profile page.
 
-- **Complete profile** with your giving interests
-- **Set privacy preferences** for donation visibility
-- **Enable two-factor authentication** for security
-- **Configure notification settings** for updates
+Each profile shows:
 
-## Finding Organizations to Support
+- **Organization name and location**
+- **Verification status** — look for the "Verified nonprofit" badge, which means the organization has completed identity verification on Give Protocol. A tooltip shows the specific registration type for the organization's home country (for example, 501(c)(3) for US organizations).
+- **Sector code** — the broad category of the organization's work (e.g., Arts & Culture, Human Services).
+- **Registration year** — when the organization was originally registered with its national authority.
+- **Mission statement** and impact statistics.
 
-### Discovery Tools
+> **Unclaimed profiles** are auto-populated from official public registry data. You can still donate to an unclaimed charity — your contribution will be held until the organization claims its profile. You can cancel an escrowed donation at any time before it is released.
 
-#### Browse by Category
+## Start a Donation
 
-- **Education**: Schools, scholarships, literacy programs
-- **Health**: Medical research, healthcare access, mental health
-- **Environment**: Conservation, climate action, sustainability
-- **Social Services**: Food security, housing, community support
-- **Emergency Relief**: Disaster response, humanitarian aid
-- **Human Rights**: Advocacy, justice, equality initiatives
+On the charity's profile page, you'll see two buttons:
 
-#### Search and Filter Options
+- **Give Once** — a one-time donation.
+- **Give Monthly** — a recurring monthly gift that is charged automatically to your card each month. You can cancel at any time via the link in your receipt email.
 
-- **Geographic location**: Local, national, or international
-- **Organization size**: Large NGOs or grassroots organizations
-- **Verification status**: Fully verified organizations only
-- **Impact metrics**: Organizations with proven results
-- **Tax-deductible**: Filter for tax-eligible donations
+Click either button to open the donation modal.
 
-### Due Diligence
+## Choose Your Payment Method
 
-#### What to Check
+At the top of the donation modal, toggle between **Card** and **Wallet**:
 
-- **Verification Badge**: Ensure organization is verified
-- **Registration Details**: 501(c)(3) or equivalent status
-- **Impact Reports**: Review past performance
-- **Financial Transparency**: Check fund allocation
-- **Community Reviews**: Read other donors' experiences
+- **Card** uses Helcim (for USD) or PayPal (for other currencies). This page covers the card flow.
+- **Wallet** uses your connected crypto wallet. See the [Crypto Giving Guide](/docs/donors/crypto-giving/).
 
-#### Red Flags to Avoid
+## Enter Your Details
 
-- Unverified organizations
-- Vague mission statements
-- No impact reporting
-- Pressure tactics
-- Unclear fund usage
+### Amount
 
-## Making Your First Donation
+Select a quick preset ($25, $50, $100, $250 for USD) or type a custom amount. If donating in a non-USD currency, the presets adjust to that currency's common denominations.
 
-### Step-by-Step Process
+### Currency
 
-1. **Select Organization**
+Use the currency dropdown to select your currency. USD donations are processed by Helcim. Other currencies (EUR, GBP, CAD, AUD, JPY, and more) are processed by PayPal.
 
-   - Click on organization profile
-   - Review their current campaigns
-   - Check recent activity
+### Your Name and Email
 
-2. **Choose Campaign**
+Enter your full name and email address. Your email is used to send your donation receipt. No account is required for one-time card donations — guest checkout is available.
 
-   - Read campaign description
-   - Note funding goal and deadline
-   - Review fund allocation plan
+### Cover Processing Fees (Optional)
 
-3. **Select Amount**
+Check this box to add a small amount (3% of your donation) so that 100% of your intended amount reaches the charity. For example, on a $50 donation, checking this box adds $1.50, bringing your total to $51.50.
 
-   - Enter donation amount
-   - Choose cryptocurrency
-   - Review exchange rate
-   - Check network fees
+If you leave it unchecked, the processing fee is deducted from the donation amount.
 
-4. **Complete Transaction**
-   - Click "Donate Now"
-   - Confirm in wallet
-   - Wait for confirmation
-   - Receive receipt
+### Age Confirmation
 
-### Cryptocurrency Options
+You must confirm that you are 16 years of age or older. This is a legal requirement under our [Privacy Policy](/privacy). If you are under 16, you cannot make a donation through Give Protocol.
 
-Give Protocol is multichain by design. You choose which network your donation travels on — every supported chain settles directly to the receiving organization's wallet.
+### Donation Data Consent
 
-#### Supported Networks
+Before completing your donation, you must check the consent box:
 
-**EVM Networks (Ethereum-compatible)**
+> "I understand my donation record links me to [charity name]. Where that could indicate a religious, political, or philosophical affiliation, I explicitly consent to Give Protocol processing this record to complete and administer my donation."
 
-| Network | Native Token | Notes |
-|---|---|---|
-| **Base** | ETH | Default network — low fees, powered by Coinbase |
-| **Optimism** | ETH | Ethereum L2 with strong DeFi ecosystem |
-| **Moonbeam** | GLMR | Polkadot parachain with cross-chain compatibility |
-| **Avalanche** | AVAX | High throughput, low fees |
-| **Ethereum** | ETH | Available for legacy compatibility |
+**What this means in plain language:** When you donate to a charity, your donation record is linked to that organization. Depending on the charity's mission (for example, a religious organization or a political advocacy group), that link could reveal something about your personal beliefs. European data protection law (GDPR Article 9) treats this kind of information as sensitive and requires your explicit consent before we can process it.
 
-**Polkadot Ecosystem**
+By checking this box, you are giving Give Protocol permission to store and process your donation record for the purpose of completing your donation, sending your receipt, and maintaining your donation history. We do not use this information for any other purpose.
 
-| Network | Native Token | Notes |
-|---|---|---|
-| **Polkadot** | DOT | Relay chain |
-| **Kusama** | KSM | Canary network |
-| **Moonbeam (parachain)** | GLMR | EVM-compatible within Polkadot |
-| **Moonriver** | MOVR | EVM-compatible within Kusama |
+This consent applies to both card and crypto donations. The exact text is versioned (`art9-donation-v1`) so you always know which version you agreed to.
 
-**Solana**
+## Complete the Payment
 
-| Network | Native Token | Notes |
-|---|---|---|
-| **Solana** | SOL | High-speed, low-cost transactions |
+Click the **Donate** button (which shows your total amount). What happens next depends on your currency:
 
-#### Commonly Accepted Tokens
+### USD (Helcim)
 
-Accepted tokens vary by organization and network. The most widely supported are **USDC** and **USDT** (available on multiple chains), plus each chain's native token (ETH, GLMR, DOT, AVAX, SOL). See the [Technical Reference: Supported Tokens]({{ '/docs/technical/supported-tokens/' | relative_url }}) for eligibility criteria.
+A secure payment window opens, hosted by Helcim (our PCI-compliant payment processor). Enter your card details directly in this window. Your card information never touches Give Protocol's servers.
 
-#### Choosing the Right Network
+After you submit:
+1. Helcim processes the charge.
+2. Give Protocol verifies the transaction.
+3. You see a success confirmation.
 
-- **For the lowest fees**: Base or Optimism (Ethereum L2s)
-- **For stablecoin giving**: USDC on Base or Optimism
-- **For Polkadot ecosystem**: Moonbeam (GLMR) or native DOT on Polkadot
-- **For Solana ecosystem**: SOL or USDC on Solana
+### Other Currencies (PayPal)
 
-> **Compatible wallets**: Base and Optimism work with MetaMask and other EVM wallets. Polkadot requires a Polkadot-compatible wallet (e.g., Talisman). Solana requires a Solana wallet (e.g., Phantom). See [Wallet Connection]({{ '/docs/getting-started/wallet-connection/' | relative_url }}) for setup instructions.
+A PayPal window opens where you can pay using your PayPal account or enter card details directly through PayPal's checkout.
 
-## Donation Strategies
+## After You Donate
 
-### One-Time Giving
+When your donation is processed:
 
-- **Best for**: Testing new organizations
-- **Benefits**: Flexibility, immediate impact
-- **Considerations**: Higher transaction fees per donation
+- A **success message** confirms your gift, showing the amount and charity name.
+- A **donation receipt** is emailed to the address you provided. The receipt includes the charity's name, Tax ID, your donation amount, the date, transaction reference, and tax-deductibility language appropriate to the charity's country.
+- If you are signed in, the donation appears in your [Give Dashboard](/docs/donors/tracking-impact/) immediately.
+- For guest donations (no account), the email receipt is your record.
 
-### Recurring Donations
+For monthly donations, your card is charged automatically each month. You can cancel anytime using the link in any receipt email.
 
-- **Best for**: Long-term support
-- **Benefits**: Predictable funding for organizations
-- **Setup**: Choose frequency and amount
-- **Management**: Easy to modify or cancel
+See [After You Donate](/docs/donors/tracking-impact/) for more on receipts, your dashboard, and exporting your donation history.
 
-### Campaign-Based Giving
+## Security Notes
 
-- **Best for**: Specific projects
-- **Benefits**: Clear impact tracking
-- **Approach**: Support time-bound initiatives
+- **Card details are never stored by Give Protocol.** Helcim and PayPal handle all card processing in their own PCI-compliant environments.
+- **One-time donations do not save your card.** You will need to re-enter card details for future donations.
+- **The donation consent checkbox is required.** Your consent record is stored with a version identifier for audit purposes.
+- **Blockchain transactions are irreversible.** Card donations processed through Helcim or PayPal follow standard payment refund policies — contact [info@giveprotocol.io](mailto:info@giveprotocol.io) if you need help.
 
-### Portfolio Giving
+## Need Help?
 
-- **Best for**: Diversified impact
-- **Strategy**: Support multiple causes
-- **Management**: Track all donations in one place
-
-## Tax Benefits
-
-### Tax Receipt Generation
-
-- **Automatic**: Receipts generated for eligible donations
-- **Format**: PDF with all required information
-- **Storage**: Available in your dashboard
-- **Annual Summary**: Year-end giving statement
-
-### Maximizing Deductions
-
-- **Donate appreciated crypto**: Avoid capital gains tax
-- **Bunch donations**: Concentrate giving in high-income years
-- **Keep records**: Save all receipts and transaction details
-- **Consult advisor**: Get professional tax advice
-
-### International Considerations
-
-- **Cross-border**: Check local tax laws
-- **Documentation**: May need additional forms
-- **Currency conversion**: Track exchange rates
-- **Professional help**: Consider international tax advisor
-
-## Advanced Features
-
-### Smart Giving Tools
-
-#### Impact Calculator
-
-- Estimate donation impact
-- Compare organizations
-- Project long-term effects
-- Optimize giving strategy
-
-#### Donation Splitting
-
-- Support multiple organizations
-- Set percentage allocations
-- Single transaction convenience
-- Reduced fees
-
-#### Conditional Donations
-
-- Set milestones for release
-- Escrow functionality
-- Automatic triggers
-- Progress verification
-
-### Privacy Options
-
-#### Anonymous Donations
-
-- **Full anonymity**: No public record
-- **Partial privacy**: Hide amount only
-- **Pseudonymous**: Use display name
-- **Tax considerations**: Still receive receipts
-
-#### Privacy Best Practices
-
-- Use separate wallet for donations
-- Consider privacy coins
-- Review organization's privacy policy
-- Understand blockchain transparency
-
-## Tracking Your Impact
-
-### Dashboard Features
-
-- **Donation History**: Complete transaction log
-- **Impact Metrics**: See your cumulative effect
-- **Organization Updates**: Progress reports
-- **Tax Documents**: All receipts in one place
-
-### Annual Giving Report
-
-- Total donations by category
-- Tax-deductible summary
-- Impact achievements
-- Year-over-year comparison
-
-### Social Features
-
-- Share impact (optional)
-- Join donor communities
-- Participate in challenges
-- Inspire others
-
-## Security Best Practices
-
-### Account Security
-
-- **Strong password**: Unique and complex
-- **2FA enabled**: Extra protection layer
-- **Regular reviews**: Check account activity
-- **Secure email**: Protect linked email account
-
-### Wallet Security
-
-- **Hardware wallet**: For large amounts
-- **Backup phrases**: Store securely offline
-- **Test transactions**: Start with small amounts
-- **Network verification**: Always check you're on correct network
-
-### Transaction Safety
-
-- **Double-check addresses**: No way to reverse
-- **Verify amounts**: Including decimals
-- **Gas estimation**: Ensure sufficient funds
-- **Confirmation waiting**: Don't close browser
-
-## Common Questions
-
-### Minimum Donations
-
-- Platform minimum: $1 USD equivalent
-- Network fees may exceed small donations
-- Consider batching small donations
-
-### Failed Transactions
-
-- Check wallet balance
-- Verify gas fees
-- Ensure network compatibility
-- Contact support if needed
-
-### Refund Policy
-
-- Blockchain transactions are irreversible
-- Organization may offer refunds
-- Dispute resolution available
-- Always donate to verified organizations
-
-## Tips for Effective Giving
-
-### Research First
-
-- Spend time understanding organizations
-- Read impact reports thoroughly
-- Check community feedback
-- Verify all claims
-
-### Start Small
-
-- Test with small donations first
-- Build trust over time
-- Increase giving as comfortable
-- Learn platform features gradually
-
-### Engage Beyond Money
-
-- Follow organization updates
-- Share their mission
-- Volunteer if possible
-- Provide feedback
-
-### Track and Adjust
-
-- Monitor donation impact
-- Adjust strategy based on results
-- Try different approaches
-- Celebrate achievements
-
-## Getting Support
-
-### Help Resources
-
-- **FAQ Section**: Common questions answered
-- **Video Tutorials**: Visual guides
-- **Community Forums**: Peer support
-- **Live Chat**: Real-time assistance
-
-### Contact Options
-
-- Email: donors@giveprotocol.org
-- Support ticket system
-- Community Discord
-- Social media channels
-
-## Next Steps
-
-Ready to make a difference? Here's how to begin:
-
-1. [Complete your profile]({{ '/docs/getting-started/creating-account/' | relative_url }})
-2. [Connect your wallet]({{ '/docs/getting-started/wallet-connection/' | relative_url }})
-3. [Browse organizations]({{ '/docs/organizations/' | relative_url }})
-4. [Make your first donation]({{ '/docs/getting-started/first-steps/' | relative_url }})
-
-Welcome to the Give Protocol donor community. Your generosity, combined with blockchain transparency, creates lasting positive change. Every donation, no matter the size, contributes to a better world.
+- [Troubleshooting donation problems](/docs/troubleshooting/donation-problems/)
+- [Contact us](/help-center/need-help/) — email [info@giveprotocol.io](mailto:info@giveprotocol.io)
