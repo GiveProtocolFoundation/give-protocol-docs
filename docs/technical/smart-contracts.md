@@ -63,7 +63,7 @@ function verifyAndReward(
 const Web3 = require("web3");
 const DurationDonationABI = require("./DurationDonation.json");
 
-const web3 = new Web3("https://rpc.api.moonbeam.network");
+const web3 = new Web3("https://mainnet.base.org");
 const contract = new web3.eth.Contract(
   DurationDonationABI.abi,
   "0x...", // Contract address
@@ -85,7 +85,7 @@ async function makeDonation(from, charity, amount) {
 const { ethers } = require("ethers");
 const DurationDonationABI = require("./DurationDonation.json");
 
-const provider = new ethers.JsonRpcProvider("https://rpc.api.moonbeam.network");
+const provider = new ethers.JsonRpcProvider("https://mainnet.base.org");
 const contract = new ethers.Contract(
   "0x...", // Contract address
   DurationDonationABI.abi,
@@ -94,7 +94,7 @@ const contract = new ethers.Contract(
 
 // Listen for donation events
 contract.on("DonationMade", (donor, charity, amount, event) => {
-  console.log(`Donation: ${donor} → ${charity}: ${amount} GLMR`);
+  console.log(`Donation: ${donor} → ${charity}: ${amount} ETH`);
 });
 ```
 

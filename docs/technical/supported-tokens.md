@@ -41,7 +41,7 @@ All tokens must meet these objective, verifiable criteria to be eligible for com
 
 ### 2. Technical Standards
 
-- **Moonbeam compatibility**: Full ERC-20 standard or native token support
+- **EVM compatibility**: Full ERC-20 standard or native token support
 - **Security history**: No known vulnerabilities or history of exploits in token contracts
 
 **Rationale**: Protects donation integrity and ensures smooth platform operations
@@ -49,7 +49,7 @@ All tokens must meet these objective, verifiable criteria to be eligible for com
 ### 3. Accessibility Metrics
 
 - **Off-ramp availability**: Documented paths to USD/EUR via compliant providers
-- **Wallet support**: Integration with MetaMask and/or Polkadot.js
+- **Wallet support**: Integration with MetaMask and other EVM-compatible wallets
 - **Regulatory status**: No active enforcement actions in G20 jurisdictions
 
 **Rationale**: Ensures charities can actually access and use donated funds
@@ -71,18 +71,39 @@ All tokens must meet these objective, verifiable criteria to be eligible for com
 
 ## Currently Supported Cryptocurrencies
 
-The following tokens have been verified to meet all criteria and are actively supported:
+The following tokens have been verified to meet all criteria and are actively supported, across Give Protocol's six supported networks — Base, Ethereum, Optimism, Arbitrum, Polygon, and Avalanche:
 
-### GLMR (Glimmer)
+### ETH (Ether)
 
-**Classification**: Platform native token
+**Classification**: Platform native token (Base, Ethereum, Optimism, Arbitrum)
 
-- **Charity benefits**: Lowest transaction costs on Moonbeam, direct ecosystem support
+- **Charity benefits**: Deep liquidity, lowest transaction costs on the Layer 2 networks
 - **Donor benefits**: Native integration, no bridge risks
 
-### DOT (Polkadot)
+### POL (Polygon)
 
-**Classification**: Ecosystem native token
+**Classification**: Platform native token (Polygon)
+
+- **Charity benefits**: Low transaction costs, direct ecosystem support
+- **Donor benefits**: Native integration, no bridge risks
+
+### AVAX (Avalanche)
+
+**Classification**: Platform native token (Avalanche)
+
+- **Charity benefits**: Low transaction costs, direct ecosystem support
+- **Donor benefits**: Native integration, no bridge risks
+
+### OP (Optimism)
+
+**Classification**: Ecosystem native token (Optimism)
+
+- **Charity benefits**: Deep liquidity, institutional-grade infrastructure
+- **Donor benefits**: Wide exchange support, proven security
+
+### ARB (Arbitrum)
+
+**Classification**: Ecosystem native token (Arbitrum)
 
 - **Charity benefits**: Deep liquidity, institutional-grade infrastructure
 - **Donor benefits**: Wide exchange support, proven security

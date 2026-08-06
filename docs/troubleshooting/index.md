@@ -47,8 +47,8 @@ Many issues can be resolved by clearing your browser's cache and cookies:
 ### Check Wallet Connection
 If transactions aren't working:
 1. Ensure your wallet extension is unlocked
-2. Verify you're on the Moonbeam network
-3. Check you have enough GLMR for gas fees
+2. Verify you're on a supported network (Base, Ethereum, Optimism, Arbitrum, Polygon, or Avalanche)
+3. Check you have enough of the network's native token for gas fees
 4. Try disconnecting and reconnecting your wallet
 
 ### Disable Browser Extensions
@@ -58,8 +58,8 @@ Some browser extensions (especially ad blockers) can interfere with the platform
 3. Try a different browser
 
 ### Check Network Status
-Occasionally, the Moonbeam network may experience congestion:
-1. Check [Moonbeam network status](https://moonscan.io)
+Occasionally, a supported network may experience congestion:
+1. Check the relevant block explorer for network status (e.g., [basescan.org](https://basescan.org) for Base)
 2. Wait a few minutes and try again
 3. Transactions may take longer during high network activity
 
@@ -69,7 +69,7 @@ Occasionally, the Moonbeam network may experience congestion:
 
 Common reasons for failed donations:
 - **Insufficient balance** - Check you have enough tokens plus gas fees
-- **Wrong network** - Ensure your wallet is connected to Moonbeam
+- **Wrong network** - Ensure your wallet is connected to the network selected for the donation (Base, Ethereum, Optimism, Arbitrum, Polygon, or Avalanche)
 - **Approval needed** - Some tokens require a separate approval transaction
 - **Slippage** - Try increasing slippage tolerance for volatile tokens
 
