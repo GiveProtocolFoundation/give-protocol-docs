@@ -47,9 +47,9 @@ Give Protocol uses non-transferable Soul-Bound Tokens (SBTs) to provide verifiab
 
 **Dual donation rails.** Donors can give by card or crypto. The platform doesn't force anyone into cryptocurrency — fiat donations work without a wallet, and the two systems are completely separate.
 
-**Multi-chain support.** Give Protocol operates on Moonbeam, Base, and Optimism, with Solana and Arbitrum planned. Donors can give using whichever blockchain network they prefer.
+**Multi-chain support.** Give Protocol operates on Base, Ethereum, Optimism, Arbitrum, Polygon, and Avalanche. Donors can give using whichever blockchain network they prefer.
 
-**Volunteer-driven and nonprofit.** Give Protocol Foundation is a 501(c)(3) nonprofit run by volunteers. There are no investors seeking returns and no token to speculate on. The protocol uses established ecosystem tokens (ETH, GLMR, USDC, DAI, and others) rather than issuing its own.
+**Volunteer-driven and nonprofit.** Give Protocol Foundation is a 501(c)(3) nonprofit run by volunteers. There are no investors seeking returns and no token to speculate on. The protocol uses established ecosystem tokens (ETH, USDC, DAI, and others) rather than issuing its own.
 
 ## The Technology
 

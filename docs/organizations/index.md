@@ -63,7 +63,7 @@ The verification process typically takes 3-5 business days.
 
 - **No setup fees** - Free to join and get verified
 - **1% protocol fee** - Applied to received donations
-- **Gas fees** - Standard Moonbeam blockchain transaction fees
+- **Gas fees** - Standard blockchain transaction fees for whichever network the donation was made on
 
 ## Need Help?
 

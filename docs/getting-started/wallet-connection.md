@@ -14,7 +14,7 @@ A crypto wallet is a piece of software that lets you hold, send, and receive cry
 
 A wallet becomes useful if you want to:
 
-- Donate cryptocurrency (ETH, GLMR, USDC, DAI, and other supported tokens)
+- Donate cryptocurrency (ETH, USDC, DAI, and other supported tokens)
 - See your donation history verified on a public blockchain
 - Earn non-transferable Soul-Bound Token (SBT) credentials for donations or volunteer work
 - Participate in governance proposals (future feature)
@@ -37,11 +37,12 @@ Give Protocol operates on multiple blockchain networks. When you connect your wa
 
 | Network | Native Token | Status |
 |---------|-------------|--------|
-| Moonbeam | GLMR | Live |
 | Base | ETH | Live |
+| Ethereum | ETH | Live |
 | Optimism | ETH | Live |
-| Solana | SOL | Planned |
-| Arbitrum | ETH | Planned |
+| Arbitrum | ETH | Live |
+| Polygon | POL | Live |
+| Avalanche | AVAX | Live |
 
 When you make a donation, the platform shows only the tokens available on your currently connected network. If you need to switch networks, Give Protocol will prompt your wallet to do so automatically.
 
@@ -66,7 +67,7 @@ If you'd like to start using crypto donations, here's how to set up MetaMask (th
 To add one of Give Protocol's supported networks to MetaMask:
 
 1. Visit [chainlist.org](https://chainlist.org).
-2. Search for the network you want (e.g., "Moonbeam," "Base," or "Optimism").
+2. Search for the network you want (e.g., "Base," "Ethereum," or "Optimism").
 3. Click **Add to Wallet** and approve the network addition in MetaMask.
 
 Or, when you attempt to donate on a specific chain through Give Protocol, the platform will prompt MetaMask to add and switch to the correct network automatically.

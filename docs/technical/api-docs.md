@@ -93,7 +93,7 @@ POST /donations
 {
   "charity_id": "charity_123",
   "amount": "100.00",
-  "currency": "GLMR",
+  "currency": "USDC",
   "message": "Keep up the great work!",
   "anonymous": false,
   "recurring": {
@@ -236,7 +236,7 @@ const gp = new GiveProtocol({
 const donation = await gp.donations.create({
   charityId: "charity_123",
   amount: "100.00",
-  currency: "GLMR",
+  currency: "USDC",
 });
 ```
 
@@ -258,7 +258,7 @@ charities = gp.charities.list(verified=True)
 donation = gp.donations.create(
     charity_id='charity_123',
     amount='100.00',
-    currency='GLMR'
+    currency='USDC'
 )
 ```
 

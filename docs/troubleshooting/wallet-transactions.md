@@ -44,7 +44,7 @@ Your wallet is connected to a network that Give Protocol doesn't support, or a d
 **To switch networks:**
 
 1. Give Protocol will prompt you to switch — click the prompt and approve the network switch in your wallet.
-2. Or manually switch in your wallet: open MetaMask → click the network dropdown at the top → select the correct network (Base, Optimism, or Moonbeam).
+2. Or manually switch in your wallet: open MetaMask → click the network dropdown at the top → select the correct network (Base, Ethereum, Optimism, Arbitrum, Polygon, or Avalanche).
 
 ### Network not available in my wallet
 
@@ -61,8 +61,11 @@ Alternatively, Give Protocol will prompt your wallet to add the network automati
 | Network | Chain ID | Native Token |
 |---------|----------|-------------|
 | Base | 8453 | ETH |
+| Ethereum | 1 | ETH |
 | Optimism | 10 | ETH |
-| Moonbeam | 1284 | GLMR |
+| Arbitrum | 42161 | ETH |
+| Polygon | 137 | POL |
+| Avalanche | 43114 | AVAX |
 
 ## Transaction Failed
 
@@ -70,14 +73,15 @@ Alternatively, Give Protocol will prompt your wallet to add the network automati
 
 You don't have enough of the selected token to complete the donation. Check your balance in your wallet or in the token selector dropdown on Give Protocol.
 
-Remember: you also need a small amount of the network's **native token** (ETH on Base/Optimism, GLMR on Moonbeam) to pay the gas fee, even if you're donating a different token like USDC.
+Remember: you also need a small amount of the network's **native token** (ETH on Base/Ethereum/Optimism/Arbitrum, POL on Polygon, AVAX on Avalanche) to pay the gas fee, even if you're donating a different token like USDC.
 
 ### "Insufficient funds for gas"
 
-You have enough of the donation token but not enough native token (ETH or GLMR) to pay the gas fee. Add a small amount of the native token to your wallet:
+You have enough of the donation token but not enough native token to pay the gas fee. Add a small amount of the native token to your wallet:
 
-- On **Base** or **Optimism**: You need a tiny amount of ETH (as little as $0.05 worth).
-- On **Moonbeam**: You need a tiny amount of GLMR.
+- On **Base**, **Ethereum**, **Optimism**, or **Arbitrum**: You need a tiny amount of ETH (as little as $0.05 worth on the Layer 2 networks).
+- On **Polygon**: You need a tiny amount of POL.
+- On **Avalanche**: You need a tiny amount of AVAX.
 
 You can purchase these on exchanges like Coinbase, Binance, or Kraken and transfer them to your wallet address.
 
@@ -91,7 +95,7 @@ Before your first donation of a specific token, your wallet needs to approve the
 
 ### Transaction stuck or pending
 
-Transactions on Layer 2 networks (Base, Optimism) usually confirm within seconds. If your transaction is stuck:
+Transactions on Layer 2 networks (Base, Optimism, Arbitrum) usually confirm within seconds. If your transaction is stuck:
 
 1. **Wait a few minutes.** Network congestion can occasionally slow confirmations.
 2. **Check the block explorer.** Click the transaction link in your wallet to see its status on the network's block explorer.
@@ -136,7 +140,7 @@ This removes the connection between Give Protocol and your wallet. It does not a
 Email us at [info@giveprotocol.io](mailto:info@giveprotocol.io). Include:
 
 1. **Your wallet address** (the public address, never your seed phrase or private key).
-2. **The network** you were using (Base, Optimism, or Moonbeam).
+2. **The network** you were using (Base, Ethereum, Optimism, Arbitrum, Polygon, or Avalanche).
 3. **Transaction hash** (if you have one) — from your wallet's activity log or a block explorer.
 4. **What happened** — error message, screenshot, or description.
 

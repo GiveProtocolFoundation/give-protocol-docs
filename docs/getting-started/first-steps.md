@@ -40,7 +40,7 @@ No wallet or crypto knowledge is required. For the full walkthrough, see [Making
 
 ### Donating with Crypto
 
-1. Make sure your wallet is connected and set to Base, Optimism, or Moonbeam.
+1. Make sure your wallet is connected and set to one of the supported networks (Base, Ethereum, Optimism, Arbitrum, Polygon, or Avalanche).
 2. Navigate to the charity's profile page.
 3. Click **Give Once** or **Give Monthly**, then toggle to **Wallet**.
 4. Select a token and enter your amount. Check the donation data consent box.
@@ -55,9 +55,12 @@ The tokens available depend on which network your wallet is connected to:
 
 | Network | Available Tokens |
 |---------|-----------------|
-| Moonbeam | GLMR, xcDOT, xcUSDC, xcUSDT, WGLMR |
-| Base | ETH, USDC, USDT, DAI |
-| Optimism | ETH, USDC.e, DAI, OP |
+| Base | ETH, WETH, USDC, USDT, DAI |
+| Ethereum | ETH, WETH, USDC, USDT, DAI |
+| Optimism | ETH, WETH, USDC, USDT, DAI, OP |
+| Arbitrum | ETH, WETH, USDC, USDT, DAI, ARB |
+| Polygon | POL, WETH, USDC, USDT, DAI |
+| Avalanche | AVAX, WAVAX, USDC, USDT, DAI |
 
 ## Explore Charitable Equity Funds (CEFs)
 

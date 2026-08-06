@@ -135,13 +135,13 @@ popular_articles:
 # Quick FAQ items for accordion
 quick_faqs:
   - question: "What cryptocurrencies can I donate?"
-    answer: "We support USDT, USDC, DOT, GLMR, and other major tokens on the Moonbeam network. Check our Supported Tokens page for the full list."
+    answer: "We support ETH, USDC, USDT, DAI, and other major tokens across Base, Ethereum, Optimism, Arbitrum, Polygon, and Avalanche. Check our Supported Tokens page for the full list."
   - question: "How do I get a tax receipt?"
     answer: "Tax receipts are automatically generated for eligible donations and sent to your registered email. You can also download them from your dashboard."
   - question: "What wallets are supported?"
     answer: "We support MetaMask, WalletConnect, SubWallet, Talisman, Nova Wallet, and other WalletConnect-compatible wallets."
   - question: "Are there any fees?"
-    answer: "Give Protocol charges a 1% protocol fee to cover operational costs. You'll also pay standard Moonbeam blockchain gas fees."
+    answer: "Give Protocol charges a 1% protocol fee to cover operational costs. You'll also pay standard blockchain gas fees for whichever network you donate on."
   - question: "How do organizations get verified?"
     answer: "Organizations submit legal documentation, pass compliance review, and complete KYC requirements. The process typically takes 3-5 business days."
   - question: "Is my donation secure?"

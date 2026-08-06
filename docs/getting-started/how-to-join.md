@@ -75,7 +75,7 @@ Enhance your public profile with additional details:
 
 Once fully set up, your organization can:
 
-- **Receive crypto donations** on Moonbeam, Base, and Optimism — with just a 0.5% platform fee. Funds go directly to your wallet through smart contracts.
+- **Receive crypto donations** on Base, Ethereum, Optimism, Arbitrum, Polygon, and Avalanche — with just a 0.5% platform fee. Funds go directly to your wallet through smart contracts.
 - **Receive fiat donations** through Helcim (USD) and PayPal (international currencies) — with a 0.5% platform fee plus standard processor fees.
 - **Operate a Charitable Equity Fund** — An endowment-style vault where donated crypto assets generate sustainable yield for your organization. (Coming soon.)
 - **Participate in Portfolio/Cause Funds** — Be included in thematic pooled funds where donors support an entire field of charitable work. (Coming soon.)

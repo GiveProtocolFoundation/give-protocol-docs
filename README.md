@@ -36,7 +36,7 @@ flowchart TD
 | **give-protocol-docs** | Jekyll documentation site (this repo). User guides, technical reference, and platform overview. | [GitHub](https://github.com/GiveProtocol/give-protocol-docs) |
 | **give-protocol-webapp** | React 18 + TypeScript progressive web app. Multi-chain wallet integration, fiat payments, donor/charity/volunteer portals. | [GitHub](https://github.com/GiveProtocol/give-protocol-webapp) |
 | **give-protocol-backend** | Supabase PostgreSQL backend. 51 database migrations, RLS policies, admin dashboard, authentication services. | [GitHub](https://github.com/GiveProtocol/give-protocol-backend) |
-| **give-protocol-contracts** | Solidity smart contracts on Hardhat. Donation processing, recurring distributions, portfolio funds, volunteer verification. Deployed on Moonbeam, Base, and Optimism networks. | [GitHub](https://github.com/GiveProtocol/give-protocol-contracts) |
+| **give-protocol-contracts** | Solidity smart contracts on Hardhat. Donation processing, recurring distributions, portfolio funds, volunteer verification. Deployed on Base, Ethereum, Optimism, Arbitrum, Polygon, and Avalanche networks. | [GitHub](https://github.com/GiveProtocol/give-protocol-contracts) |
 
 ## Documentation Structure
 

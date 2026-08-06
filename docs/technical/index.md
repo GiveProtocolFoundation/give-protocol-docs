@@ -34,11 +34,11 @@ View the complete list of cryptocurrencies supported for donations on Give Proto
 
 ## Platform Architecture
 
-Give Protocol is built on the Moonbeam network, an Ethereum-compatible parachain on Polkadot. This provides:
+Give Protocol is a standard multi-chain EVM application, running natively on six blockchain networks: Base (primary), Ethereum, Optimism, Arbitrum, Polygon, and Avalanche. This provides:
 
-- **EVM Compatibility** - Use standard Ethereum tooling and wallets
-- **Cross-Chain Potential** - Future support for cross-chain donations
-- **Low Fees** - Significantly lower transaction costs than Ethereum mainnet
+- **EVM Compatibility** - Use standard Ethereum tooling and wallets on every supported network
+- **Multi-Chain Reach** - Donors can give from whichever supported network their wallet already holds funds on
+- **Low Fees** - Layer 2 networks like Base, Optimism, and Arbitrum offer significantly lower transaction costs than Ethereum mainnet
 - **Fast Finality** - Quick transaction confirmation times
 
 ## Smart Contract Overview

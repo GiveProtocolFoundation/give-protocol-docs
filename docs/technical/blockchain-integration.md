@@ -32,22 +32,21 @@ Give Protocol is built on blockchain technology to ensure transparency, security
 - Automated compliance and reporting
 - Programmable donation rules
 
-## Moonbeam Network
+## Multi-Chain EVM Support
 
-Give Protocol is built on the Moonbeam network, providing:
+Give Protocol is a standard multi-chain EVM application, running natively on six blockchain networks: **Base** (primary), **Ethereum**, **Optimism**, **Arbitrum**, **Polygon**, and **Avalanche**. There is no dependency on any single chain — the same smart contracts are deployed across all six networks, and donors can choose whichever one they prefer.
 
 ### Ethereum Compatibility
 
-- Full Ethereum Virtual Machine (EVM) support
+- Full Ethereum Virtual Machine (EVM) support on every supported chain
 - Solidity smart contract compatibility
 - Familiar development tools and libraries
 - Easy migration from Ethereum
 
-### Polkadot Integration
+### Cross-Chain Design
 
-- Cross-chain interoperability
-- Shared security from Polkadot
-- Access to the broader Polkadot ecosystem
+- Consistent contract behavior across all six supported networks
+- Donors can give from whichever chain their wallet already holds funds on
 - Scalable and sustainable architecture
 
 ### Developer-Friendly Features
@@ -115,8 +114,8 @@ Give Protocol is built on the Moonbeam network, providing:
 1. **Set Up a Wallet**
 
    - Install MetaMask or compatible wallet
-   - Connect to Moonbeam network
-   - Add GLMR tokens for gas fees
+   - Connect to Base, Ethereum, Optimism, Arbitrum, Polygon, or Avalanche
+   - Add the network's native token for gas fees
 
 2. **Connect to Give Protocol**
    - Visit the Give Protocol dApp
@@ -128,7 +127,7 @@ Give Protocol is built on the Moonbeam network, providing:
 1. **Development Environment**
 
    - Set up Hardhat development environment
-   - Configure Moonbeam network connection
+   - Configure connections for the supported networks (Base, Ethereum, Optimism, Arbitrum, Polygon, Avalanche)
    - Install Give Protocol SDK
 
 2. **Integration Options**
@@ -141,17 +140,25 @@ Give Protocol is built on the Moonbeam network, providing:
 
 ### Network Details
 
-- **Network Name**: Moonbeam
-- **Chain ID**: 1284 (Mainnet), 1287 (Testnet)
-- **Currency**: GLMR
-- **Block Time**: ~12 seconds
-- **Finality**: ~12-18 seconds
+| Network | Chain ID | Native Token |
+|---------|----------|-------------|
+| Base (Mainnet) | 8453 | ETH |
+| Ethereum (Mainnet) | 1 | ETH |
+| Optimism (Mainnet) | 10 | ETH |
+| Arbitrum (Mainnet) | 42161 | ETH |
+| Polygon (Mainnet) | 137 | POL |
+| Avalanche (Mainnet) | 43114 | AVAX |
+
+Testnets are also available for development, including Base Sepolia (84532), Optimism Sepolia (11155420), and Avalanche Fuji (43113), plus their respective testnets on the other supported chains.
+
+- **Block Time**: Varies by network, typically 1-2 seconds on Base/Optimism/Arbitrum
+- **Finality**: Typically a few seconds on Layer 2 networks
 
 ### Contract Addresses
 
-- Main contracts deployed on Moonbeam
+- Main contracts deployed identically across all six supported networks
 - Testnet contracts available for development
-- Verified source code on Moonscan
+- Verified source code on each network's block explorer (e.g., Basescan for Base)
 - Comprehensive ABI documentation
 
 ## Need Help?

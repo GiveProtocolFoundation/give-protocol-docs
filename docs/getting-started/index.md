@@ -62,6 +62,6 @@ Whether you're a donor looking to support causes you care about, a charitable or
 
 - **No wallet required.** You can donate by card (USD via Helcim, international currencies via PayPal) without ever touching cryptocurrency.
 - **Minimal platform fees.** Give Protocol charges just 0.5% on direct donations and 1% on portfolio funds — significantly less than the 3–5% charged by most traditional platforms. Donors also pay standard gas fees (crypto) or payment processor fees (fiat).
-- **Multi-chain support.** Crypto donations are supported on Moonbeam, Base, and Optimism, with more networks coming.
+- **Multi-chain support.** Crypto donations are supported on Base, Ethereum, Optimism, Arbitrum, Polygon, and Avalanche.
 - **Open source.** Give Protocol's code is publicly available and community-driven.
 - **Nonprofit.** Give Protocol Foundation is a Delaware-incorporated 501(c)(3) organization.

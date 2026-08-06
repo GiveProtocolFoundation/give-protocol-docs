@@ -16,7 +16,7 @@ How to find a charity, make a card donation through Helcim or PayPal, and what t
 [Making a Donation](/docs/donors/making-donations/){: .btn-primary}
 
 ### Crypto Giving Guide
-What a wallet is, how to set one up, supported networks (Base, Optimism, Moonbeam), making a crypto donation, gas fees, and on-chain transparency.
+What a wallet is, how to set one up, supported networks (Base, Ethereum, Optimism, Arbitrum, Polygon, Avalanche), making a crypto donation, gas fees, and on-chain transparency.
 
 [Crypto Giving Guide](/docs/donors/crypto-giving/){: .btn-primary}
 
